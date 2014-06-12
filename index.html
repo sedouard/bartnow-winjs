@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>WinJS Peeps</title>
+    <!--Bing maps-->
+    <script charset="UTF-8" type="text/javascript" src="https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&s=1"></script>
+
+    <!-- WinJS references -->
+    <link href="lib/winjs/css/ui-dark.css" rel="stylesheet" />
+    <script src="lib/winjs/js/base.js"></script>
+    <script src="lib/winjs/js/ui.js"></script>
+    <script src="lib/winjs/js/en-US/base.strings.js"></script>
+    <script src="lib/winjs/js/en-US/ui.strings.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    
+    
+    <script src="lib/underscorejs/underscore-min.js"></script>
+    <script src="lib/backbonejs/backbone-min.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <!--<div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>-->
+    <!--This is where all pages go -->
+    
+    <div id="contenthost" style="width:100%;height:100%"></div>
+    
+    <!--The app bar lives in the default page since it appears on all pages (will be hidden for login splash screen)-->
+    
+    <!-- Create AppBar -->
+    <div class="box">
+        <!-- Create AppBar -->
+        <!-- BEGINTEMPLATE: Template code for an AppBar -->
+        <div id="navBar" data-win-control="WinJS.UI.AppBar" data-win-options="{ placement: 'bottom'}">
+            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdAdd',label:'Add',icon:'add',section:'global',tooltip:'Add item'}"></button>
+            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRemove',label:'Remove',icon:'remove',section:'global',tooltip:'Remove item'}"></button>
+            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdDelete',label:'Delete',icon:'delete',section:'global',tooltip:'Delete item'}"></button>
+            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdEdit',label:'Edit',icon:'edit',section:'selection',tooltip:'Edit'}"></button>
+        </div>
+        <!-- ENDTEMPLATE -->
+        <div id="status"></div><br />
+
+    </div>
+
+
+        <div id="pane" style="width:100%;position:relative;bottom:50px; z-index:2; text-align:center">
+            <button id="toggleNavBar" style="height:30px; width:30px;border:none"><img src="/images/Down-arrow-icon.png" height="30" width="30"></button>
+        </div>
+
+    
+
+</body>

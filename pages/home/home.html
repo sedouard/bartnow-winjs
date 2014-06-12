@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>BartNOW</title>
+
+    <link href="/pages/home/home.css" rel="stylesheet"/>
+    <script src="/pages/home/home.js"></script>
+</script>
+</script>
+</head>
+<body>
+
+<!-- Start PIVOT... -->
+<div id="stationTemplate" data-win-control="WinJS.Binding.Template">
+    <div class="mailItem">
+        <div class="hitTarget win-interactive"></div>
+        <div class="authorRoot">
+            <h2 class="author" data-win-bind="innerHTML: attributes.name"></h2>
+        </div>
+        <h5 class="title win-pivot-slide1" data-win-bind="innerHTML: attributes.etd[0].formattedArrivals; style.color: attributes.etd[0].estimate[0].color"></h5>
+        <h5 class="previewText win-pivot-slide2" data-win-bind="innerHTML: attributes.etd[1].formattedArrivals; style.color: attributes.etd[1].estimate[0].color"></h5>
+        <h5 class="previewText2  win-pivot-slide3" data-win-bind="innerHTML: attributes.etd[2].formattedArrivals; style.color: attributes.etd[2].estimate[0].color"></h5>
+    </div>
+</div>
+
+<div id="homePivot" data-win-control="WinJS.UI.Pivot" data-win-options="{ title: 'BartNOW', selectedIndex: 0 }">
+    <div class="listviewpivotitem" data-win-control="WinJS.UI.PivotItem" data-win-options="{ 'header': 'map', managedLV: true }" style="text-align:center">
+        
+        <div id='mapDiv' style="position:relative; left:10%; width:80%; height:80%;"></div>
+    </div>
+    <div  class="listviewpivotitem" data-win-control="WinJS.UI.PivotItem" data-win-options="{ 'header': 'stations', managedLV: true }">
+        <div id="homePivotListView" data-win-control="WinJS.UI.ListView" data-win-options="{ itemDataSource: Stations.dataSource, layout: { type: WinJS.UI.ListLayout }, itemTemplate: stationTemplate, selectionMode: 'none' }"></div>
+    </div>
+</div>
+
+</body>

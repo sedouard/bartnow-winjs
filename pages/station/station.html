@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title id="pageTitle"></title>
+
+    <link href="/pages/station/station.css" rel="stylesheet"/>
+    <script src="/pages/station/station.js"></script>
+</script>
+</script>
+</head>
+<body>
+
+<!-- Start PIVOT... -->
+<div id="stationTemplate" data-win-control="WinJS.Binding.Template">
+    <div class="mailItem">
+        <div class="hitTarget win-interactive"></div>
+        <div class="authorRoot">
+            <h2 class="author" data-win-bind="innerHTML: destination"></h2>
+        </div>
+        <h5 class="title win-pivot-slide1" data-win-bind="innerHTML: estimate[0].minutes; style.color: estimate[0].color"></h5>
+        <h5 class="previewText win-pivot-slide2" data-win-bind="innerHTML: estimate[1].minutes; style.color: estimate[1].color"></h5>
+        <h5 class="previewText2  win-pivot-slide3" data-win-bind="innerHTML: estimate[2].minutes; style.color: estimate[2].color"></h5>
+    </div>
+</div>
+
+<div id="pivotScenario3" data-win-control="WinJS.UI.Pivot" data-win-options="{ title: 'BartNow.Station.name', selectedIndex: 0 }">
+    <div class="listviewpivotitem" data-win-control="WinJS.UI.PivotItem" data-win-options="{ 'header': 'trains', managedLV: true }">
+        
+        <div data-win-control="WinJS.UI.ListView" data-win-options="{ itemDataSource: BartNow.Station.stationData.dataSource, layout: { type: WinJS.UI.ListLayout }, itemTemplate: stationTemplate, selectionMode: 'none' }"></div>
+    </div>
+    <div class="listviewpivotitem" data-win-control="WinJS.UI.PivotItem" data-win-options="{ 'header': 'schedule', managedLV: true }">
+    </div>
+</div>
+
+</body>
