@@ -1,6 +1,6 @@
 //globally redirect to our rest api
 $.ajaxPrefilter( function(options, originalOptions, jqXHR){
-    options.url = "http://localhost:3000/api" + options.url;
+    options.url = "http://bartnowapi.azurewebsites.net/api" + options.url;
 });
 
 (function () {
