@@ -150,6 +150,7 @@ var StationView = Backbone.View.extend({
     });
 
 
+    /**
 
     app.oncheckpoint = function (args) {
         // TODO: This application is about to be suspended. Save any state
@@ -158,7 +159,8 @@ var StationView = Backbone.View.extend({
         // suspended, call args.setPromise().
         app.sessionState.history = nav.history;
     };
-
+    
+    **/
     app.start();
 
 })();
