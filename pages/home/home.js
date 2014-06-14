@@ -10,7 +10,7 @@
     
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready:function(element, stations){
-            $("#progress").show();
+            //$("#progress").show();
             for(var i in stations.models){
                 var model = stations.models[i];
                 window.Stations.push(stations.models[i]);
@@ -55,7 +55,7 @@
 
                         });
                     }
-                    $("#progress").hide();
+                    //$("#progress").hide();
 
                 }, function(error){
                     alert(error);
