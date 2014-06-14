@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name=”Viewport” content=”width=320; user-scaleable=no; initial-scale=1.0” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>BartNOW</title>
 
     <link href="/pages/home/home.css" rel="stylesheet"/>
@@ -26,7 +26,7 @@
 
 <div id="homePivot" data-win-control="WinJS.UI.Pivot" data-win-options="{ title: 'BartNOW', selectedIndex: 0 }" style=".win-pivot-headers{ font-size: 400% }">
     <div class="listviewpivotitem" data-win-control="WinJS.UI.PivotItem" data-win-options="{ 'header': 'map', managedLV: true }" style="text-align:center">
-        
+        <progress id="progress" style="z-index:1"/>
         <div id='mapDiv' style="position:relative; left:10%; width:80%; height:80%;"></div>
     </div>
     <div  class="listviewpivotitem" data-win-control="WinJS.UI.PivotItem" data-win-options="{ 'header': 'stations', managedLV: true }">

@@ -10,7 +10,7 @@
     
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready:function(element, stations){
-
+            $("#progress").show();
             for(var i in stations.models){
                 var model = stations.models[i];
                 window.Stations.push(stations.models[i]);
@@ -44,11 +44,10 @@
                         map.entities.push(stationPin);
                     }
 
-                    //go through each item on the list and add a click handler
+                    //add click handler to each list view tiem
                     var thatStations = stations;
                     var listView = $("#homePivotListView")[0];
                         if(listView){
-                            console.log('HALLEJUAH!');
                             listView.addEventListener("iteminvoked", function (evt) {
                             var index = evt.detail.itemIndex;
 
@@ -56,6 +55,7 @@
 
                         });
                     }
+                    $("#progress").hide();
 
                 }, function(error){
                     alert(error);
