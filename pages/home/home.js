@@ -15,7 +15,7 @@
                 var model = stations.models[i];
                 window.Stations.push(stations.models[i]);
             }
-            var text = "http://stevenedouard.com/hello";
+            
             var map;
 
             if(navigator.geolocation){
@@ -55,7 +55,7 @@
 
                         });
                     }
-                    //$("#progress").hide();
+//                    $("#progress").hide();
 
                 }, function(error){
                     alert(error);

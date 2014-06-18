@@ -3,6 +3,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>BartNOW</title>
     <!--Bing maps-->
@@ -25,7 +26,10 @@
 <body>
     <!--<div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>-->
     <!--This is where all pages go -->
-    
+    <div style="z-index:1; position:relative; top: 50%; text-align:center">
+        <progress id="progressSymbol"></progress>
+    </div>
+    <div id="contenthost" style="width:100%;height:100%"></div>
     <div id="contenthost" style="width:100%;height:100%"></div>
     
     <!--The app bar lives in the default page since it appears on all pages (will be hidden for login splash screen)-->

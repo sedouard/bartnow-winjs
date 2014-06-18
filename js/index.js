@@ -62,7 +62,7 @@ $.ajaxPrefilter( function(options, originalOptions, jqXHR){
                     var hp = new HomePage(that.el, stations);
                     hp.element.style.width = "100%";
                     hp.element.style.height = "100%";
-                    
+                    $("#progressSymbol").hide();
                 }
             });
             
@@ -95,6 +95,7 @@ var StationView = Backbone.View.extend({
                     var hp = new StationPage(that.el, station);
                     hp.element.style.width = "100%";
                     hp.element.style.height = "100%";
+                    $("#progressSymbol").hide();
                 }
             });
             
@@ -117,11 +118,13 @@ var StationView = Backbone.View.extend({
     var router = new AppRouter();
 
     router.on('route:home', function(){
+        $("#progressSymbol").show();
         console.log('Home route hit');
         var home_view = new HomeView({ el: $("#contenthost") });
     });
 
     router.on('route:station', function(id){
+        $("#progressSymbol").show();
         console.log('Station route hit');
         var home_view = new StationView({ el: $("#contenthost"), id: id });
     });
