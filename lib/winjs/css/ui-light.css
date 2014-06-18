@@ -1,9 +1,4 @@
-﻿/*!
-  Copyright (c) Microsoft Open Technologies, Inc.  All Rights Reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
-  Build: 2.0.1.WinJS.2014.6.12
-  Version: WinJS.2.1
-*/
-
+/* Copyright (c) Microsoft Open Technologies, Inc.  All Rights Reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information. */
 @keyframes WinJS-opacity-in {
   from {
     opacity: 0;
@@ -1135,6 +1130,278 @@ h6 {
   font-weight: 400;
   line-height: 1.6667;
 }
+@media (-ms-high-contrast) {
+  .win-type-interactive {
+    color: WindowText;
+  }
+  .win-type-interactive:hover,
+  .win-type-interactive:hover:active {
+    color: -ms-hotlight;
+  }
+  .win-type-interactive:-ms-keyboard-active {
+    color: -ms-hotlight;
+  }
+  /*
+    Text selection high contrast color.
+    */
+  ::selection,
+  select:focus::-ms-value {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  /*
+    Button
+    */
+  button,
+  input[type=button],
+  input[type=reset],
+  input[type=file]::-ms-browse {
+    background-color: ButtonFace;
+    border-color: ButtonText;
+    color: ButtonText;
+  }
+  button[type=submit],
+  input[type=submit] {
+    background-color: Highlight;
+    border-color: ButtonText;
+    color: HighlightText;
+  }
+  button:hover:active,
+  button[type=submit]:hover:active,
+  input[type=button]:hover:active,
+  input[type=submit]:hover:active,
+  input[type=reset]:hover:active,
+  input[type=file]::-ms-browse:hover:active {
+    background-clip: border-box;
+    background-color: ButtonText;
+    border-color: transparent;
+    color: ButtonFace;
+  }
+  button:disabled,
+  button[type=submit]:disabled,
+  input[type=button]:disabled,
+  input[type=submit]:disabled,
+  input[type=reset]:disabled,
+  input[type=file]:disabled::-ms-browse,
+  button:disabled:active,
+  button[type=submit]:disabled:active,
+  input[type=button]:disabled:active,
+  input[type=submit]:disabled:active,
+  input[type=reset]:disabled:active,
+  input[type=file]:disabled::-ms-browse:active {
+    background-color: ButtonFace;
+    border-color: GrayText;
+    color: GrayText;
+  }
+  button:-ms-keyboard-active,
+  button[type=submit]:-ms-keyboard-active,
+  input[type=button]:-ms-keyboard-active,
+  input[type=submit]:-ms-keyboard-active,
+  input[type=reset]:-ms-keyboard-active {
+    background-clip: border-box;
+    background-color: ButtonText;
+    border-color: transparent;
+    color: ButtonFace;
+  }
+  button:hover,
+  input[type=button]:hover,
+  input[type=reset]:hover,
+  input::-ms-clear:hover,
+  input::-ms-reveal:hover,
+  input[type=file]::-ms-browse:hover {
+    background-color: Highlight;
+    border-color: ButtonText;
+    color: HighlightText;
+  }
+  input::-ms-clear:hover:active,
+  input::-ms-reveal:hover:active {
+    background-clip: border-box;
+    background-color: ButtonText;
+    border-color: transparent;
+    color: ButtonFace;
+  }
+  input:disabled::-ms-clear,
+  input:disabled::-ms-reveal,
+  select:disabled::-ms-expand {
+    background-color: ButtonFace;
+    border-color: GrayText;
+    color: GrayText;
+  }
+  input::-ms-clear,
+  input::-ms-reveal,
+  select::-ms-expand {
+    background-color: ButtonFace;
+    border-color: ButtonText;
+    color: ButtonText;
+  }
+  /*
+    Select
+    */
+  select:active:not(:disabled)::-ms-expand {
+    color: ButtonFace;
+    background-color: ButtonText;
+  }
+  option:checked,
+  select:focus::-ms-value {
+    color: HighlightText;
+    background-color: Highlight;
+  }
+  select:active:not(:disabled)::-ms-value,
+  option:hover:active,
+  option:checked:hover:active {
+    color: ButtonFace;
+    background-color: ButtonText;
+  }
+  option:checked:disabled,
+  option:checked:disabled:active,
+  optgroup:disabled option:checked,
+  optgroup:disabled option:checked:active,
+  select:disabled option:checked,
+  select:disabled option:checked:active,
+  select:disabled:focus::-ms-value {
+    color: ButtonFace;
+    background-color: GrayText;
+  }
+  /*
+    Link high contrast colors.
+    */
+  a {
+    color: -ms-hotlight;
+  }
+  a[disabled] {
+    color: GrayText;
+  }
+  /*
+    Text input, checkbox, radio, and select high contrast colors.
+    */
+  input:hover::-ms-check {
+    /* only checkbox and radio have hover state */
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=number],
+  input[type=tel],
+  input[type=url],
+  input[type=search],
+  textarea,
+  .win-textarea,
+  select,
+  input::-ms-check {
+    background-color: ButtonFace;
+    border-color: ButtonText;
+    color: ButtonText;
+  }
+  input:hover:active::-ms-check {
+    /* only checkbox and radio have active state */
+    background-clip: border-box;
+    background-color: ButtonText;
+    border-color: transparent;
+    color: ButtonFace;
+  }
+  input[type=text]:disabled,
+  input[type=password]:disabled,
+  input[type=email]:disabled,
+  input[type=number]:disabled,
+  input[type=tel]:disabled,
+  input[type=url]:disabled,
+  input[type=search]:disabled,
+  input[type=file]::-ms-value,
+  textarea:disabled,
+  .win-textarea:disabled,
+  select:disabled,
+  input:disabled::-ms-check,
+  input:disabled:active::-ms-check {
+    border-color: GrayText;
+    color: ButtonText;
+    background-color: ButtonFace;
+  }
+  input:disabled::-ms-check,
+  input:disabled:active::-ms-check,
+  input[type]:-ms-input-placeholder,
+  textarea:-ms-input-placeholder,
+  select:disabled::-ms-value {
+    color: GrayText;
+  }
+  input:-ms-keyboard-active::-ms-check {
+    /* only checkbox and radio have active state */
+    background-clip: border-box;
+    background-color: ButtonText;
+    border-color: transparent;
+    color: ButtonFace;
+  }
+  /*
+    Progress high contrast colors.
+    */
+  progress {
+    border: 1px solid ButtonText;
+    background-color: ButtonFace;
+    color: Highlight;
+  }
+  progress:indeterminate {
+    border: transparent;
+  }
+  progress::-ms-fill {
+    border-right: 1px solid ButtonText;
+    background-color: Highlight;
+  }
+  progress.win-paused:not(:indeterminate)::-ms-fill {
+    background-color: GrayText;
+  }
+  progress.win-paused:not(:indeterminate) {
+    opacity: 1.0;
+  }
+  /*
+    Slider
+    */
+  input[type=range]::-ms-track {
+    border: 1px solid ButtonText;
+    background-color: ButtonFace;
+    color: transparent;
+  }
+  input[type=range]:disabled::-ms-track {
+    border-color: GrayText;
+  }
+  input[type=range]::-ms-fill-lower {
+    background-color: Highlight;
+  }
+  input[type=range]:disabled::-ms-fill-lower {
+    background-color: transparent;
+  }
+  input[type=range]::-ms-ticks-before,
+  input[type=range]::-ms-ticks-after {
+    color: ButtonText;
+  }
+  input[type=range]:disabled::-ms-ticks-before,
+  input[type=range]:disabled::-ms-ticks-after {
+    color: GrayText;
+  }
+  input[type=range]::-ms-thumb {
+    background-color: ButtonText;
+    border-left: 1px solid HighlightText;
+    border-right: 1px solid HighlightText;
+  }
+  input[type=range].win-vertical::-ms-thumb {
+    border-left-style: none;
+    border-right-style: none;
+    border-top: 1px solid HighlightText;
+    border-bottom: 1px solid HighlightText;
+  }
+  input[type=range]:active::-ms-thumb {
+    background-color: HighlightText;
+    border-color: ButtonText;
+  }
+  input[type=range]:disabled::-ms-thumb,
+  input[type=range]:disabled:active::-ms-thumb {
+    background-color: GrayText;
+    border-color: GrayText;
+  }
+  input[type=range]:hover::-ms-thumb {
+    background-color: Highlight;
+  }
+}
 .win-toggleswitch {
   padding: 0px;
   vertical-align: top;
@@ -1216,6 +1483,14 @@ h6 {
 }
 .win-focus-hide {
   outline: none;
+}
+@media (-ms-high-contrast) {
+  .win-toggleswitch .win-switch:disabled::-ms-fill-lower {
+    background-color: GrayText;
+  }
+  .win-toggleswitch .win-switch::-ms-thumb {
+    height: 17px;
+  }
 }
 .win-hub {
   height: 100%;
@@ -1374,6 +1649,24 @@ button.win-hub-section-header-tabstop:-ms-keyboard-active {
 .win-hub-vertical .win-hub-section-content {
   width: 100%;
 }
+@media (-ms-high-contrast) {
+  button.win-hub-section-header-tabstop,
+  button.win-hub-section-header-tabstop:hover,
+  button.win-hub-section-header-tabstop:hover:active {
+    background-color: transparent;
+    color: WindowText;
+  }
+  button.win-hub-section-header-tabstop:-ms-keyboard-active {
+    color: WindowText;
+  }
+  button.win-hub-section-header-tabstop.win-hub-section-header-interactive:hover,
+  button.win-hub-section-header-tabstop.win-hub-section-header-interactive:hover:active {
+    color: -ms-hotlight;
+  }
+  button.win-hub-section-header-tabstop.win-hub-section-header-interactive:-ms-keyboard-active {
+    color: -ms-hotlight;
+  }
+}
 body > .win-navigation-backbutton {
   position: absolute;
   top: 50px;
@@ -1431,6 +1724,57 @@ button.win-navigation-backbutton:active:hover {
   height: 45px;
   width: 45px;
 }
+button.win-navigation-backbutton,
+button.win-navigation-backbutton:active,
+button.win-navigation-backbutton:enabled:hover,
+button.win-navigation-backbutton:enabled:hover:active {
+  background-color: transparent;
+  border: none;
+}
+@media (-ms-high-contrast) {
+  button.win-navigation-backbutton,
+  button.win-navigation-backbutton:active,
+  button.win-navigation-backbutton:enabled:hover,
+  button.win-navigation-backbutton:enabled:hover:active {
+    /* Overwrite default background and border styles from BackButton control's <button> element */
+    background-color: transparent;
+    border: none;
+  }
+  .win-backbutton,
+  .win-back {
+    background-color: ButtonFace;
+    border-color: ButtonText;
+    color: ButtonText;
+  }
+  .win-backbutton:enabled:hover:active,
+  .win-navigation-backbutton:enabled:hover:active .win-back {
+    background-clip: border-box;
+    background-color: ButtonText;
+    border-color: transparent;
+    color: ButtonFace;
+  }
+  .win-backbutton:disabled,
+  .win-navigation-backbutton:disabled .win-back,
+  .win-backbutton:disabled:active,
+  .win-navigation-backbutton:disabled:active .win-back {
+    background-color: ButtonFace;
+    border-color: GrayText;
+    color: GrayText;
+  }
+  .win-backbutton:-ms-keyboard-active,
+  .win-navigation-backbutton:-ms-keyboard-active .win-back {
+    background-clip: border-box;
+    background-color: ButtonText;
+    border-color: transparent;
+    color: ButtonFace;
+  }
+  .win-backbutton:enabled:hover,
+  .win-navigation-backbutton:enabled:hover .win-back {
+    background-color: Highlight;
+    border-color: ButtonText;
+    color: HighlightText;
+  }
+}
 .win-rating {
   display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
@@ -1472,6 +1816,26 @@ button.win-navigation-backbutton:active:hover {
   cursor: default;
   -ms-touch-action: auto;
   touch-action: auto;
+}
+@media (-ms-high-contrast) {
+  .win-rating .win-star:before {
+    content: "\E082" !important;
+  }
+  .win-rating .win-star.win-full {
+    color: HighLight;
+  }
+  .win-rating .win-star.win-tentative.win-full {
+    color: ButtonText;
+  }
+  .win-rating .win-star.win-empty {
+    color: ButtonFace;
+  }
+  .win-rating .win-star:after {
+    content: "\E224" !important;
+    position: relative;
+    top: -100%;
+    color: ButtonText;
+  }
 }
 .win-datepicker {
   display: inline-flex;
@@ -2076,6 +2440,309 @@ button.win-navigation-backbutton:active:hover {
 .win-itemcontainer.win-swipeable.win-vertical .win-itembox {
   touch-action: pan-x pinch-zoom cross-slide-y;
 }
+.win-selectioncheckmark {
+  color: #ffffff;
+}
+.win-selectionhint {
+  color: #ffffff;
+}
+.win-listview.win-selectionstylefilled .win-container.win-selected:hover .win-itembox,
+.win-itemcontainer.win-selectionstylefilled.win-container.win-selected:hover .win-itembox {
+  background-color: #5f37be;
+}
+.win-listview.win-selectionstylefilled .win-selected,
+.win-itemcontainer.win-selectionstylefilled.win-selected {
+  color: #ffffff;
+}
+.win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectionborder,
+.win-itemcontainer:not(.win-selectionstylefilled).win-container.win-selected .win-selectionborder {
+  border-color: #4617b4;
+}
+.win-listview.win-selectionstylefilled .win-container.win-selected .win-selectionborder,
+.win-itemcontainer.win-selectionstylefilled.win-container.win-selected .win-selectionborder {
+  border-color: transparent;
+}
+.win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectionborder,
+.win-itemcontainer:not(.win-selectionstylefilled).win-container.win-selected:hover .win-selectionborder {
+  border-color: #5f37be;
+}
+.win-listview.win-selectionstylefilled .win-selected .win-selectionbackground,
+.win-itemcontainer.win-selectionstylefilled.win-selected .win-selectionbackground {
+  background-color: #4617b4;
+}
+.win-listview.win-selectionstylefilled .win-selected:hover .win-selectionbackground,
+.win-itemcontainer.win-selectionstylefilled.win-selected:hover .win-selectionbackground {
+  background-color: #5f37be;
+}
+.win-listview:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground,
+.win-itemcontainer:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground {
+  border-top-color: #4617b4;
+  border-right-color: #4617b4;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+.win-listview.win-selectionstylefilled .win-selectioncheckmarkbackground,
+.win-itemcontainer.win-selectionstylefilled .win-selectioncheckmarkbackground {
+  border-color: transparent;
+}
+.win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground,
+.win-itemcontainer:not(.win-selectionstylefilled).win-container.win-selected:hover .win-selectioncheckmarkbackground {
+  border-top-color: #5f37be;
+  border-right-color: #5f37be;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+.win-listview.win-rtl:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground,
+.win-itemcontainer.win-rtl:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground {
+  border-left-color: #4617b4;
+  border-right-color: transparent;
+}
+.win-listview.win-rtl:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground,
+.win-itemcontainer.win-rtl:not(.win-selectionstylefilled).win-container.win-selected:hover .win-selectioncheckmarkbackground {
+  border-left-color: #5f37be;
+  border-right-color: transparent;
+}
+.win-listview.win-selectionstylefilled .win-selected a,
+.win-listview.win-selectionstylefilled .win-selected progress,
+.win-listview.win-selectionstylefilled .win-selected .win-rating .win-star.win-full,
+.win-itemcontainer.win-selectionstylefilled.win-selected a,
+.win-itemcontainer.win-selectionstylefilled.win-selected progress,
+.win-itemcontainer.win-selectionstylefilled.win-selected .win-rating .win-star.win-full {
+  color: #ffffff;
+}
+.win-listview.win-selectionstylefilled .win-selected a:hover:active,
+.win-itemcontainer.win-selectionstylefilled.win-selected a:hover:active {
+  color: rgba(255, 255, 255, 0.6);
+}
+.win-listview.win-selectionstylefilled .win-selected a:hover,
+.win-itemcontainer.win-selectionstylefilled.win-selected a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+.win-listview.win-selectionstylefilled .win-selected button,
+.win-listview.win-selectionstylefilled .win-selected input[type=button],
+.win-listview.win-selectionstylefilled .win-selected input[type=reset],
+.win-listview.win-selectionstylefilled .win-selected input[type=text],
+.win-listview.win-selectionstylefilled .win-selected input[type=password],
+.win-listview.win-selectionstylefilled .win-selected input[type=email],
+.win-listview.win-selectionstylefilled .win-selected input[type=number],
+.win-listview.win-selectionstylefilled .win-selected input[type=tel],
+.win-listview.win-selectionstylefilled .win-selected input[type=url],
+.win-listview.win-selectionstylefilled .win-selected input[type=search],
+.win-listview.win-selectionstylefilled .win-selected input::-ms-check,
+.win-listview.win-selectionstylefilled .win-selected textarea,
+.win-listview.win-selectionstylefilled .win-selected .win-textarea,
+.win-listview.win-selectionstylefilled .win-selected select,
+.win-itemcontainer.win-selectionstylefilled.win-selected button,
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=button],
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=reset],
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=text],
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=password],
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=email],
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=number],
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=tel],
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=url],
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=search],
+.win-itemcontainer.win-selectionstylefilled.win-selected input::-ms-check,
+.win-itemcontainer.win-selectionstylefilled.win-selected textarea,
+.win-itemcontainer.win-selectionstylefilled.win-selected .win-textarea,
+.win-itemcontainer.win-selectionstylefilled.win-selected select {
+  background-clip: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: transparent;
+  color: #000000;
+}
+.win-listview.win-selectionstylefilled .win-selected button[type=submit],
+.win-listview.win-selectionstylefilled .win-selected input[type=submit],
+.win-itemcontainer.win-selectionstylefilled.win-selected button[type=submit],
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=submit] {
+  border-color: #ffffff;
+}
+.win-listview.win-selectionstylefilled .win-selected input[type=range]::-ms-fill-lower,
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=range]::-ms-fill-lower {
+  background-color: #ffffff;
+}
+.win-listview.win-selectionstylefilled .win-selected input[type=range]::-ms-thumb,
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=range]::-ms-thumb {
+  background-color: #000000;
+}
+.win-listview.win-selectionstylefilled .win-selected input[type=range]::-ms-fill-upper,
+.win-listview.win-selectionstylefilled .win-selected progress,
+.win-itemcontainer.win-selectionstylefilled.win-selected input[type=range]::-ms-fill-upper,
+.win-itemcontainer.win-selectionstylefilled.win-selected progress {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.win-listview.win-selectionstylefilled .win-selected progress:indeterminate,
+.win-itemcontainer.win-selectionstylefilled.win-selected progress:indeterminate {
+  background-color: transparent;
+}
+.win-listview.win-selectionstylefilled .win-selected .win-rating .win-star.win-empty,
+.win-itemcontainer.win-selectionstylefilled.win-selected .win-rating .win-star.win-empty {
+  color: rgba(255, 255, 255, 0.16);
+}
+@media (-ms-high-contrast) {
+  .win-listview .win-groupheader {
+    color: WindowText;
+  }
+  .win-selectioncheckmark {
+    color: HighlightText;
+  }
+  .win-listview .win-selectionhint,
+  .win-itemcontainer .win-selectionhint {
+    color: WindowText;
+  }
+  .win-listview .win-focusedoutline,
+  .win-listview .win-groupheader,
+  .win-itemcontainer .win-focusedoutline {
+    outline-color: WindowText;
+  }
+  .win-listview.win-selectionstylefilled .win-itembox,
+  .win-itemcontainer.win-selectionstylefilled .win-itembox {
+    background-color: Window;
+    color: WindowText;
+  }
+  .win-listview.win-selectionstylefilled .win-container:hover .win-itembox,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover .win-itembox {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  .win-listview.win-selectionstylefilled .win-container.win-selected .win-itembox,
+  .win-listview.win-selectionstylefilled .win-container.win-selected:hover .win-itembox,
+  .win-itemcontainer.win-selectionstylefilled.win-container.win-selected .win-itembox,
+  .win-itemcontainer.win-selectionstylefilled.win-container.win-selected:hover .win-itembox {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  .win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectionborder,
+  .win-itemcontainer:not(.win-selectionstylefilled).win-container.win-selected .win-selectionborder {
+    border-color: Highlight;
+  }
+  .win-listview.win-selectionstylefilled .win-container.win-selected .win-selectionborder,
+  .win-itemcontainer.win-selectionstylefilled.win-container.win-selected .win-selectionborder {
+    border-color: transparent;
+  }
+  .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectionborder,
+  .win-itemcontainer:not(.win-selectionstylefilled).win-container.win-selected:hover .win-selectionborder {
+    border-color: Highlight;
+  }
+  .win-listview.win-selectionstylefilled .win-selected .win-selectionbackground,
+  .win-listview.win-selectionstylefilled .win-selected:hover .win-selectionbackground,
+  .win-itemcontainer.win-selectionstylefilled.win-selected .win-selectionbackground,
+  .win-itemcontainer.win-selectionstylefilled.win-selected:hover .win-selectionbackground {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  .win-listview.win-selectionstylefilled .win-selectioncheckmarkbackground,
+  .win-itemcontainer.win-selectionstylefilled .win-selectioncheckmarkbackground {
+    border-color: transparent;
+  }
+  .win-listview:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground,
+  .win-itemcontainer:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground {
+    border-top-color: Highlight;
+    border-right-color: Highlight;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+  .win-listview:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground:hover,
+  .win-itemcontainer:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground:hover {
+    border-top-color: Highlight;
+    border-right-color: Highlight;
+  }
+  .win-listview.win-rtl:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground,
+  .win-itemcontainer.win-rtl:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground {
+    border-top-color: Highlight;
+    border-left-color: Highlight;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+  .win-listview.win-selectionstylefilled .win-selected a,
+  .win-listview.win-selectionstylefilled .win-container:hover a,
+  .win-listview.win-selectionstylefilled .win-selected progress,
+  .win-listview.win-selectionstylefilled .win-container:hover progress,
+  .win-listview.win-selectionstylefilled .win-selected .win-rating .win-star:after,
+  .win-listview.win-selectionstylefilled .win-container:hover .win-rating .win-star:after,
+  .win-itemcontainer.win-selectionstylefilled.win-selected a,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover a,
+  .win-itemcontainer.win-selectionstylefilled.win-selected progress,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover progress,
+  .win-itemcontainer.win-selectionstylefilled.win-selected .win-rating .win-star:after,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover .win-rating .win-star:after {
+    color: HighlightText;
+  }
+  .win-listview.win-selectionstylefilled .win-selected input,
+  .win-listview.win-selectionstylefilled .win-container:hover input,
+  .win-listview.win-selectionstylefilled .win-selected input::-ms-check,
+  .win-listview.win-selectionstylefilled .win-container:hover input::-ms-check,
+  .win-listview.win-selectionstylefilled .win-selected input::-ms-value,
+  .win-listview.win-selectionstylefilled .win-container:hover input::-ms-value,
+  .win-listview.win-selectionstylefilled .win-selected input::-ms-track,
+  .win-listview.win-selectionstylefilled .win-container:hover input::-ms-track,
+  .win-listview.win-selectionstylefilled .win-selected button,
+  .win-listview.win-selectionstylefilled .win-container:hover button,
+  .win-listview.win-selectionstylefilled .win-selected progress,
+  .win-listview.win-selectionstylefilled .win-container:hover progress,
+  .win-listview.win-selectionstylefilled .win-selected progress::-ms-fill,
+  .win-listview.win-selectionstylefilled .win-container:hover progress::-ms-fill,
+  .win-listview.win-selectionstylefilled .win-selected select,
+  .win-listview.win-selectionstylefilled .win-container:hover select,
+  .win-listview.win-selectionstylefilled .win-selected textarea,
+  .win-listview.win-selectionstylefilled .win-container:hover textarea,
+  .win-listview.win-selectionstylefilled.win-selected input,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover input,
+  .win-itemcontainer.win-selectionstylefilled.win-selected input::-ms-check,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover input::-ms-check,
+  .win-itemcontainer.win-selectionstylefilled.win-selected input::-ms-value,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover input::-ms-value,
+  .win-itemcontainer.win-selectionstylefilled.win-selected input::-ms-track,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover input::-ms-track,
+  .win-itemcontainer.win-selectionstylefilled.win-selected button,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover button,
+  .win-itemcontainer.win-selectionstylefilled.win-selected progress,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover progress,
+  .win-itemcontainer.win-selectionstylefilled.win-selected progress::-ms-fill,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover progress::-ms-fill,
+  .win-itemcontainer.win-selectionstylefilled.win-selected select,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover select,
+  .win-itemcontainer.win-selectionstylefilled.win-selected textarea,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover textarea {
+    border-color: HighlightText;
+  }
+  .win-listview.win-selectionstylefilled .win-selected input[type=range]::-ms-fill-lower,
+  .win-listview.win-selectionstylefilled .win-container:hover input[type=range]::-ms-fill-lower,
+  .win-listview.win-selectionstylefilled .win-selected progress::-ms-fill,
+  .win-listview.win-selectionstylefilled .win-container:hover progress::-ms-fill,
+  .win-itemcontainer.win-selectionstylefilled.win-selected input[type=range]::-ms-fill-lower,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover input[type=range]::-ms-fill-lower,
+  .win-itemcontainer.win-selectionstylefilled.win-selected progress::-ms-fill,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover progress::-ms-fill {
+    background-color: HighlightText;
+  }
+  .win-listview.win-selectionstylefilled .win-selected input[type=range]::-ms-fill-upper,
+  .win-listview.win-selectionstylefilled .win-container:hover input[type=range]::-ms-fill-upper,
+  .win-listview.win-selectionstylefilled .win-selected progress,
+  .win-listview.win-selectionstylefilled .win-container:hover progress,
+  .win-itemcontainer.win-selectionstylefilled.win-selected input[type=range]::-ms-fill-upper,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover input[type=range]::-ms-fill-upper,
+  .win-itemcontainer.win-selectionstylefilled.win-selected progress,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover progress {
+    background-color: Highlight;
+  }
+  .win-listview.win-selectionstylefilled .win-selected .win-rating .win-star.win-full:before,
+  .win-listview.win-selectionstylefilled .win-container:hover .win-rating .win-star.win-full:before,
+  .win-itemcontainer.win-selectionstylefilled.win-selected .win-rating .win-star.win-full:before,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover .win-rating .win-star.win-full:before {
+    color: ButtonFace;
+  }
+  .win-listview.win-selectionstylefilled .win-selected .win-rating .win-star.win-empty:before,
+  .win-listview.win-selectionstylefilled .win-container:hover .win-rating .win-star.win-empty:before,
+  .win-itemcontainer.win-selectionstylefilled.win-selected .win-rating .win-star.win-empty:before,
+  .win-itemcontainer.win-selectionstylefilled.win-container:hover .win-rating .win-star.win-empty:before {
+    color: Highlight;
+  }
+  .win-listview .win-container:hover,
+  .win-itemcontainer.win-container:hover {
+    outline: Highlight solid 3px;
+  }
+}
 .win-flipview {
   overflow: hidden;
   height: 400px;
@@ -2125,6 +2792,44 @@ button.win-navigation-backbutton:active:hover {
   align-items: center;
   justify-content: center;
 }
+.win-flipview .win-navbutton {
+  background-color: rgba(213, 213, 213, 0.35);
+  color: rgba(0, 0, 0, 0.6);
+}
+.win-flipview .win-navbutton:hover {
+  background-color: rgba(215, 215, 215, 0.94);
+  color: #000000;
+}
+.win-flipview .win-navbutton:hover:active {
+  background-color: rgba(41, 41, 41, 0.74);
+  color: #ffffff;
+}
+@media (-ms-high-contrast) {
+  .win-flipview .win-navbottom {
+    left: 50%;
+    top: 100%;
+    margin-left: -35px;
+    margin-top: -35px;
+  }
+  .win-flipview .win-navbutton {
+    background-color: ButtonFace;
+    color: ButtonText;
+    border: 2px solid ButtonText;
+    width: 65px;
+    height: 35px;
+  }
+  .win-flipview .win-navbutton:hover {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  .win-flipview .win-navbutton:active {
+    background-color: ButtonText;
+    color: ButtonFace;
+  }
+  .win-flipview .win-navright {
+    margin-left: -65px;
+  }
+}
 .win-tooltip {
   display: block;
   position: fixed;
@@ -2152,6 +2857,18 @@ button.win-navigation-backbutton:active:hover {
   border-width: 0;
   margin: 0;
   padding: 0;
+}
+.win-tooltip {
+  background-color: #ffffff;
+  border-color: #808080;
+  color: rgba(0, 0, 0, 0.6);
+}
+@media (-ms-high-contrast) {
+  .win-tooltip {
+    background-color: Window;
+    border-color: WindowText;
+    color: WindowText;
+  }
 }
 .win-scrollview {
   overflow-x: auto;
@@ -2196,6 +2913,30 @@ button.win-navigation-backbutton:active:hover {
 }
 .win-semanticzoom .win-listview > .win-viewport * {
   touch-action: auto;
+}
+@media (-ms-high-contrast) {
+  .win-semanticzoom-button {
+    background-color: ButtonFace;
+    border-color: ButtonText;
+    color: ButtonText;
+  }
+  .win-semanticzoom-button:hover:active {
+    background-clip: border-box;
+    background-color: ButtonText;
+    border-color: transparent;
+    color: ButtonFace;
+  }
+  .win-semanticzoom-button:-ms-keyboard-active {
+    background-clip: border-box;
+    background-color: ButtonText;
+    border-color: transparent;
+    color: ButtonFace;
+  }
+  .win-semanticzoom-button:hover {
+    background-color: Highlight;
+    border-color: ButtonText;
+    color: HighlightText;
+  }
 }
 .win-viewbox {
   width: 100%;
@@ -2928,6 +3669,173 @@ Settings Pane
     -webkit-transform: none;
   }
 }
+/* AppBarCommand (and MenuCommand) separator. */
+hr.win-command {
+  /* Same color in both light and dark. */
+  background-color: #7b7b7b;
+}
+/*
+Settings flyout is light in both themes unless the app explicitly overrides it.
+*/
+.win-settingsflyout {
+  background-color: #ffffff;
+}
+.win-settingsflyout.win-ui-dark {
+  background-color: #000000;
+}
+@media (-ms-high-contrast) {
+  .win-appbar {
+    background-color: ButtonFace;
+    border-color: Highlight;
+  }
+  /*
+    AppBarCommand and Command button high contrast colors.
+    */
+  button.win-command,
+  button.win-command:active,
+  button.win-command:enabled:hover:active,
+  div.win-command,
+  div.win-command:active,
+  div.win-command:enabled:hover:active {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  hr.win-command {
+    background-color: ButtonText;
+  }
+  .win-label {
+    background-color: transparent;
+    color: ButtonText;
+  }
+  button:disabled .win-label,
+  button:disabled:active .win-label {
+    color: GrayText;
+  }
+  button:enabled.win-command:focus,
+  div:enabled.win-command:focus {
+    border-color: ButtonText;
+  }
+  button.win-hidefocus:focus,
+  div.win-hidefocus:focus {
+    outline: none;
+  }
+  button:enabled.win-command.win-hidefocus:focus,
+  div:enabled.win-command.win-hidefocus:focus {
+    border-color: transparent;
+  }
+  /*
+    Command Image high contrast colors with states
+    */
+  .win-commandimage {
+    background-color: transparent;
+    color: ButtonText;
+  }
+  button:active .win-commandimage,
+  button:enabled:hover:active .win-commandimage {
+    color: ButtonFace;
+  }
+  button:enabled:hover .win-commandimage {
+    color: HighlightText;
+  }
+  button:disabled .win-commandimage,
+  button:disabled:active .win-commandimage {
+    color: GrayText;
+  }
+  button[aria-checked=true] .win-commandimage {
+    color: ButtonFace;
+  }
+  button[aria-checked=true]:active .win-commandimage,
+  button[aria-checked=true]:enabled:hover:active .win-commandimage {
+    color: ButtonText;
+  }
+  button[aria-checked=true]:enabled:hover .win-commandimage {
+    color: HighlightText;
+  }
+  button[aria-checked=true]:disabled .win-commandimage,
+  button[aria-checked=true]:disabled:active .win-commandimage {
+    color: ButtonFace;
+  }
+  /*
+    Command Image high contrast colors with states
+    */
+  .win-commandring {
+    background-color: transparent;
+    border-color: ButtonText;
+  }
+  button:active .win-commandring,
+  button:enabled:hover:active .win-commandring {
+    background-color: ButtonText;
+    border-color: ButtonText;
+  }
+  button:enabled:hover .win-commandring {
+    background-color: Highlight;
+    border-color: ButtonText;
+  }
+  button:disabled .win-commandring,
+  button:disabled:active .win-commandring {
+    background-color: transparent;
+    border-color: GrayText;
+  }
+  button[aria-checked=true] .win-commandring {
+    background-color: ButtonText;
+    border-color: ButtonText;
+  }
+  button[aria-checked=true]:active .win-commandring,
+  button[aria-checked=true]:enabled:hover:active .win-commandring {
+    background-color: ButtonFace;
+    border-color: ButtonText;
+  }
+  button[aria-checked=true]:enabled:hover .win-commandring {
+    background-color: Highlight;
+    border-color: ButtonText;
+  }
+  button[aria-checked=true]:disabled .win-commandring,
+  button[aria-checked=true]:disabled:active .win-commandring {
+    background-color: GrayText;
+    border-color: GrayText;
+  }
+  /*
+    Menu command high contrast colors
+    */
+  .win-menu hr.win-command {
+    background-color: ButtonText;
+  }
+  .win-menu button.win-command {
+    background-color: ButtonFace;
+    color: ButtonText;
+  }
+  .win-menu button.win-command:focus {
+    outline: none;
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  .win-menu button.win-command:active {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  .win-menu button.win-command:enabled:hover:active {
+    background-color: ButtonText;
+    color: ButtonFace;
+  }
+  .win-menu button.win-command:-ms-keyboard-active {
+    background-color: ButtonText;
+    color: ButtonFace;
+  }
+  .win-menu button.win-command:disabled,
+  .win-menu button.win-command:disabled:active {
+    background-color: ButtonFace;
+    color: GrayText;
+  }
+  /*
+    Flyout control high contrast colors.
+    */
+  .win-flyout,
+  .win-settingsflyout {
+    background-color: Window;
+    border-color: WindowText;
+    color: WindowText;
+  }
+}
 .win-searchbox {
   white-space: normal;
   position: relative;
@@ -3115,6 +4023,84 @@ Search box control animations
   }
   to {
     -webkit-transform: none;
+  }
+}
+@media (-ms-high-contrast) {
+  .win-searchbox {
+    border-color: ButtonText;
+    background-color: ButtonFace;
+    color: ButtonText;
+  }
+  .win-searchbox-button {
+    background-color: ButtonFace;
+    color: ButtonText;
+  }
+  .win-searchbox:-ms-input-placeholder {
+    color: GrayText;
+  }
+  .win-searchbox-button[disabled=false]:hover {
+    border-color: ButtonText;
+    background-color: HighLight;
+    color: HighLightText;
+  }
+  .win-searchbox-button-input-focus {
+    background-color: ButtonText;
+    color: ButtonFace;
+  }
+  .win-searchbox-button-input-focus:hover {
+    border-color: ButtonText;
+    background-color: HighLight;
+    color: HighLightText;
+  }
+  .win-searchbox-button:active {
+    background-color: ButtonText;
+    color: ButtonFace;
+  }
+  .win-searchbox-flyout {
+    border-color: ButtonText;
+    background-color: ButtonFace;
+  }
+  .win-searchbox-suggestion-result:hover,
+  .win-searchbox-suggestion-query:hover {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  .win-searchbox-suggestion-result:hover .win-searchbox-flyout-highlighttext,
+  .win-searchbox-suggestion-query:hover .win-searchbox-flyout-highlighttext {
+    color: HighlightText;
+  }
+  .win-searchbox-suggestion-query,
+  .win-searchbox-suggestion-result {
+    color: ButtonText;
+  }
+  .win-searchbox-suggestion-selected {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  .win-searchbox-suggestion-separator {
+    color: ButtonText;
+  }
+  .win-searchbox-suggestion-separator hr {
+    border-color: ButtonText;
+  }
+  .win-searchbox-flyout-highlighttext {
+    color: ButtonText;
+  }
+  .win-searchbox-disabled {
+    background-color: ButtonFace;
+    border-color: GrayText;
+  }
+  .win-searchbox-disabled input[disabled] {
+    background-color: ButtonFace;
+    color: GrayText;
+    border-color: GrayText;
+  }
+  .win-searchbox-disabled div {
+    color: GrayText;
+    background-color: ButtonFace;
+  }
+  .win-searchbox-suggestion-selected .win-searchbox-flyout-highlighttext {
+    color: HighlightText;
   }
 }
 .win-navbar {
@@ -3311,6 +4297,84 @@ Search box control animations
 .win-navbarcommand-splitbutton:focus {
   outline: none;
 }
+@media (-ms-high-contrast) {
+  .win-navbarcontainer-pageindicator {
+    background-color: ButtonFace;
+  }
+  .win-navbarcontainer-pageindicator:after {
+    display: block;
+    border: 1px solid ButtonText;
+    content: "";
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+  }
+  .win-navbarcontainer-pageindicator-current {
+    background-color: ButtonText;
+  }
+  .win-navbarcontainer-pageindicator:hover {
+    background-color: Highlight;
+  }
+  .win-navbarcontainer-pageindicator-current:hover {
+    background-color: ButtonText;
+  }
+  .win-navbarcontainer-pageindicator:hover:active {
+    background-color: ButtonText;
+  }
+  .win-navbarcontainer-navarrow {
+    background-color: ButtonFace;
+    color: ButtonText;
+  }
+  .win-navbarcontainer-navarrow:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid ButtonText;
+    content: "";
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+  }
+  .win-navbarcontainer-navarrow:hover {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  .win-navbarcontainer-navarrow:hover:active {
+    background-color: ButtonText;
+    color: ButtonFace;
+  }
+  /*
+        NavBarCommand colors.
+    */
+  .win-navbarcommand-button,
+  .win-navbarcommand-splitbutton {
+    background-color: ButtonFace;
+    color: ButtonText;
+  }
+  .win-navbarcommand-button:after,
+  .win-navbarcommand-splitbutton:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid ButtonText;
+    content: "";
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+    pointer-events: none;
+  }
+  .win-navbarcommand-button:hover,
+  .win-navbarcommand-splitbutton:hover {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  .win-navbarcommand-splitbutton.win-navbarcommand-splitbutton-opened,
+  .win-navbarcommand-splitbutton.win-navbarcommand-splitbutton-opened:hover,
+  .win-navbarcommand-button.win-pressed,
+  .win-navbarcommand-button.win-pressed:hover,
+  .win-navbarcommand-splitbutton.win-pressed,
+  .win-navbarcommand-splitbutton.win-pressed:hover {
+    background-color: ButtonText;
+    color: ButtonFace;
+  }
+}
 .win-pivot {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -3472,1076 +4536,6 @@ Search box control animations
 .win-pivot.win-pivot-nosnap .win-pivot-item {
   width: 100%;
 }
-@media (-ms-high-contrast) {
-  .win-type-interactive {
-    color: WindowText;
-  }
-  .win-type-interactive:hover,
-  .win-type-interactive:hover:active {
-    color: -ms-hotlight;
-  }
-  .win-type-interactive:-ms-keyboard-active {
-    color: -ms-hotlight;
-  }
-  /*
-    Text selection high contrast color.
-    */
-  ::selection,
-  select:focus::-ms-value {
-    background-color: Highlight;
-    color: HighlightText;
-  }
-  /*
-    Button
-    */
-  button,
-  input[type=button],
-  input[type=reset],
-  input[type=file]::-ms-browse {
-    background-color: ButtonFace;
-    border-color: ButtonText;
-    color: ButtonText;
-  }
-  button[type=submit],
-  input[type=submit] {
-    background-color: Highlight;
-    border-color: ButtonText;
-    color: HighlightText;
-  }
-  button:hover:active,
-  button[type=submit]:hover:active,
-  input[type=button]:hover:active,
-  input[type=submit]:hover:active,
-  input[type=reset]:hover:active,
-  input[type=file]::-ms-browse:hover:active {
-    background-clip: border-box;
-    background-color: ButtonText;
-    border-color: transparent;
-    color: ButtonFace;
-  }
-  button:disabled,
-  button[type=submit]:disabled,
-  input[type=button]:disabled,
-  input[type=submit]:disabled,
-  input[type=reset]:disabled,
-  input[type=file]:disabled::-ms-browse,
-  button:disabled:active,
-  button[type=submit]:disabled:active,
-  input[type=button]:disabled:active,
-  input[type=submit]:disabled:active,
-  input[type=reset]:disabled:active,
-  input[type=file]:disabled::-ms-browse:active {
-    background-color: ButtonFace;
-    border-color: GrayText;
-    color: GrayText;
-  }
-  button:-ms-keyboard-active,
-  button[type=submit]:-ms-keyboard-active,
-  input[type=button]:-ms-keyboard-active,
-  input[type=submit]:-ms-keyboard-active,
-  input[type=reset]:-ms-keyboard-active {
-    background-clip: border-box;
-    background-color: ButtonText;
-    border-color: transparent;
-    color: ButtonFace;
-  }
-  button:hover,
-  input[type=button]:hover,
-  input[type=reset]:hover,
-  input::-ms-clear:hover,
-  input::-ms-reveal:hover,
-  input[type=file]::-ms-browse:hover {
-    background-color: Highlight;
-    border-color: ButtonText;
-    color: HighlightText;
-  }
-  input::-ms-clear:hover:active,
-  input::-ms-reveal:hover:active {
-    background-clip: border-box;
-    background-color: ButtonText;
-    border-color: transparent;
-    color: ButtonFace;
-  }
-  input:disabled::-ms-clear,
-  input:disabled::-ms-reveal,
-  select:disabled::-ms-expand {
-    background-color: ButtonFace;
-    border-color: GrayText;
-    color: GrayText;
-  }
-  input::-ms-clear,
-  input::-ms-reveal,
-  select::-ms-expand {
-    background-color: ButtonFace;
-    border-color: ButtonText;
-    color: ButtonText;
-  }
-  /*
-    Select
-    */
-  select:active:not(:disabled)::-ms-expand {
-    color: ButtonFace;
-    background-color: ButtonText;
-  }
-  option:checked,
-  select:focus::-ms-value {
-    color: HighlightText;
-    background-color: Highlight;
-  }
-  select:active:not(:disabled)::-ms-value,
-  option:hover:active,
-  option:checked:hover:active {
-    color: ButtonFace;
-    background-color: ButtonText;
-  }
-  option:checked:disabled,
-  option:checked:disabled:active,
-  optgroup:disabled option:checked,
-  optgroup:disabled option:checked:active,
-  select:disabled option:checked,
-  select:disabled option:checked:active,
-  select:disabled:focus::-ms-value {
-    color: ButtonFace;
-    background-color: GrayText;
-  }
-  /*
-    Link high contrast colors.
-    */
-  a {
-    color: -ms-hotlight;
-  }
-  a[disabled] {
-    color: GrayText;
-  }
-  /*
-    Text input, checkbox, radio, and select high contrast colors.
-    */
-  input:hover::-ms-check {
-    /* only checkbox and radio have hover state */
-    background-color: Highlight;
-    color: HighlightText;
-  }
-  input[type=text],
-  input[type=password],
-  input[type=email],
-  input[type=number],
-  input[type=tel],
-  input[type=url],
-  input[type=search],
-  textarea,
-  .win-textarea,
-  select,
-  input::-ms-check {
-    background-color: ButtonFace;
-    border-color: ButtonText;
-    color: ButtonText;
-  }
-  input:hover:active::-ms-check {
-    /* only checkbox and radio have active state */
-    background-clip: border-box;
-    background-color: ButtonText;
-    border-color: transparent;
-    color: ButtonFace;
-  }
-  input[type=text]:disabled,
-  input[type=password]:disabled,
-  input[type=email]:disabled,
-  input[type=number]:disabled,
-  input[type=tel]:disabled,
-  input[type=url]:disabled,
-  input[type=search]:disabled,
-  input[type=file]::-ms-value,
-  textarea:disabled,
-  .win-textarea:disabled,
-  select:disabled,
-  input:disabled::-ms-check,
-  input:disabled:active::-ms-check {
-    border-color: GrayText;
-    color: ButtonText;
-    background-color: ButtonFace;
-  }
-  input:disabled::-ms-check,
-  input:disabled:active::-ms-check,
-  input[type]:-ms-input-placeholder,
-  textarea:-ms-input-placeholder,
-  select:disabled::-ms-value {
-    color: GrayText;
-  }
-  input:-ms-keyboard-active::-ms-check {
-    /* only checkbox and radio have active state */
-    background-clip: border-box;
-    background-color: ButtonText;
-    border-color: transparent;
-    color: ButtonFace;
-  }
-  /*
-    Progress high contrast colors.
-    */
-  progress {
-    border: 1px solid ButtonText;
-    background-color: ButtonFace;
-    color: Highlight;
-  }
-  progress:indeterminate {
-    border: transparent;
-  }
-  progress::-ms-fill {
-    border-right: 1px solid ButtonText;
-    background-color: Highlight;
-  }
-  progress.win-paused:not(:indeterminate)::-ms-fill {
-    background-color: GrayText;
-  }
-  progress.win-paused:not(:indeterminate) {
-    opacity: 1.0;
-  }
-  /*
-    Slider
-    */
-  input[type=range]::-ms-track {
-    border: 1px solid ButtonText;
-    background-color: ButtonFace;
-    color: transparent;
-  }
-  input[type=range]:disabled::-ms-track {
-    border-color: GrayText;
-  }
-  input[type=range]::-ms-fill-lower {
-    background-color: Highlight;
-  }
-  input[type=range]:disabled::-ms-fill-lower {
-    background-color: transparent;
-  }
-  input[type=range]::-ms-ticks-before,
-  input[type=range]::-ms-ticks-after {
-    color: ButtonText;
-  }
-  input[type=range]:disabled::-ms-ticks-before,
-  input[type=range]:disabled::-ms-ticks-after {
-    color: GrayText;
-  }
-  input[type=range]::-ms-thumb {
-    background-color: ButtonText;
-    border-left: 1px solid HighlightText;
-    border-right: 1px solid HighlightText;
-  }
-  input[type=range].win-vertical::-ms-thumb {
-    border-left-style: none;
-    border-right-style: none;
-    border-top: 1px solid HighlightText;
-    border-bottom: 1px solid HighlightText;
-  }
-  input[type=range]:active::-ms-thumb {
-    background-color: HighlightText;
-    border-color: ButtonText;
-  }
-  input[type=range]:disabled::-ms-thumb,
-  input[type=range]:disabled:active::-ms-thumb {
-    background-color: GrayText;
-    border-color: GrayText;
-  }
-  input[type=range]:hover::-ms-thumb {
-    background-color: Highlight;
-  }
-}
-@media (-ms-high-contrast) {
-  .win-toggleswitch .win-switch:disabled::-ms-fill-lower {
-    background-color: GrayText;
-  }
-  .win-toggleswitch .win-switch::-ms-thumb {
-    height: 17px;
-  }
-}
-@media (-ms-high-contrast) {
-  button.win-hub-section-header-tabstop,
-  button.win-hub-section-header-tabstop:hover,
-  button.win-hub-section-header-tabstop:hover:active {
-    background-color: transparent;
-    color: WindowText;
-  }
-  button.win-hub-section-header-tabstop:-ms-keyboard-active {
-    color: WindowText;
-  }
-  button.win-hub-section-header-tabstop.win-hub-section-header-interactive:hover,
-  button.win-hub-section-header-tabstop.win-hub-section-header-interactive:hover:active {
-    color: -ms-hotlight;
-  }
-  button.win-hub-section-header-tabstop.win-hub-section-header-interactive:-ms-keyboard-active {
-    color: -ms-hotlight;
-  }
-}
-button.win-navigation-backbutton,
-button.win-navigation-backbutton:active,
-button.win-navigation-backbutton:enabled:hover,
-button.win-navigation-backbutton:enabled:hover:active {
-  background-color: transparent;
-  border: none;
-}
-@media (-ms-high-contrast) {
-  button.win-navigation-backbutton,
-  button.win-navigation-backbutton:active,
-  button.win-navigation-backbutton:enabled:hover,
-  button.win-navigation-backbutton:enabled:hover:active {
-    /* Overwrite default background and border styles from BackButton control's <button> element */
-    background-color: transparent;
-    border: none;
-  }
-  .win-backbutton,
-  .win-back {
-    background-color: ButtonFace;
-    border-color: ButtonText;
-    color: ButtonText;
-  }
-  .win-backbutton:enabled:hover:active,
-  .win-navigation-backbutton:enabled:hover:active .win-back {
-    background-clip: border-box;
-    background-color: ButtonText;
-    border-color: transparent;
-    color: ButtonFace;
-  }
-  .win-backbutton:disabled,
-  .win-navigation-backbutton:disabled .win-back,
-  .win-backbutton:disabled:active,
-  .win-navigation-backbutton:disabled:active .win-back {
-    background-color: ButtonFace;
-    border-color: GrayText;
-    color: GrayText;
-  }
-  .win-backbutton:-ms-keyboard-active,
-  .win-navigation-backbutton:-ms-keyboard-active .win-back {
-    background-clip: border-box;
-    background-color: ButtonText;
-    border-color: transparent;
-    color: ButtonFace;
-  }
-  .win-backbutton:enabled:hover,
-  .win-navigation-backbutton:enabled:hover .win-back {
-    background-color: Highlight;
-    border-color: ButtonText;
-    color: HighlightText;
-  }
-}
-@media (-ms-high-contrast) {
-  .win-rating .win-star:before {
-    content: "\E082" !important;
-  }
-  .win-rating .win-star.win-full {
-    color: HighLight;
-  }
-  .win-rating .win-star.win-tentative.win-full {
-    color: ButtonText;
-  }
-  .win-rating .win-star.win-empty {
-    color: ButtonFace;
-  }
-  .win-rating .win-star:after {
-    content: "\E224" !important;
-    position: relative;
-    top: -100%;
-    color: ButtonText;
-  }
-}
-.win-selectioncheckmark {
-  color: #ffffff;
-}
-.win-selectionhint {
-  color: #ffffff;
-}
-.win-listview.win-selectionstylefilled .win-container.win-selected:hover .win-itembox,
-.win-itemcontainer.win-selectionstylefilled.win-container.win-selected:hover .win-itembox {
-  background-color: #5f37be;
-}
-.win-listview.win-selectionstylefilled .win-selected,
-.win-itemcontainer.win-selectionstylefilled.win-selected {
-  color: #ffffff;
-}
-.win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectionborder,
-.win-itemcontainer:not(.win-selectionstylefilled).win-container.win-selected .win-selectionborder {
-  border-color: #4617b4;
-}
-.win-listview.win-selectionstylefilled .win-container.win-selected .win-selectionborder,
-.win-itemcontainer.win-selectionstylefilled.win-container.win-selected .win-selectionborder {
-  border-color: transparent;
-}
-.win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectionborder,
-.win-itemcontainer:not(.win-selectionstylefilled).win-container.win-selected:hover .win-selectionborder {
-  border-color: #5f37be;
-}
-.win-listview.win-selectionstylefilled .win-selected .win-selectionbackground,
-.win-itemcontainer.win-selectionstylefilled.win-selected .win-selectionbackground {
-  background-color: #4617b4;
-}
-.win-listview.win-selectionstylefilled .win-selected:hover .win-selectionbackground,
-.win-itemcontainer.win-selectionstylefilled.win-selected:hover .win-selectionbackground {
-  background-color: #5f37be;
-}
-.win-listview:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground,
-.win-itemcontainer:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground {
-  border-top-color: #4617b4;
-  border-right-color: #4617b4;
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-}
-.win-listview.win-selectionstylefilled .win-selectioncheckmarkbackground,
-.win-itemcontainer.win-selectionstylefilled .win-selectioncheckmarkbackground {
-  border-color: transparent;
-}
-.win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground,
-.win-itemcontainer:not(.win-selectionstylefilled).win-container.win-selected:hover .win-selectioncheckmarkbackground {
-  border-top-color: #5f37be;
-  border-right-color: #5f37be;
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-}
-.win-listview.win-rtl:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground,
-.win-itemcontainer.win-rtl:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground {
-  border-left-color: #4617b4;
-  border-right-color: transparent;
-}
-.win-listview.win-rtl:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground,
-.win-itemcontainer.win-rtl:not(.win-selectionstylefilled).win-container.win-selected:hover .win-selectioncheckmarkbackground {
-  border-left-color: #5f37be;
-  border-right-color: transparent;
-}
-.win-listview.win-selectionstylefilled .win-selected a,
-.win-listview.win-selectionstylefilled .win-selected progress,
-.win-listview.win-selectionstylefilled .win-selected .win-rating .win-star.win-full,
-.win-itemcontainer.win-selectionstylefilled.win-selected a,
-.win-itemcontainer.win-selectionstylefilled.win-selected progress,
-.win-itemcontainer.win-selectionstylefilled.win-selected .win-rating .win-star.win-full {
-  color: #ffffff;
-}
-.win-listview.win-selectionstylefilled .win-selected a:hover:active,
-.win-itemcontainer.win-selectionstylefilled.win-selected a:hover:active {
-  color: rgba(255, 255, 255, 0.6);
-}
-.win-listview.win-selectionstylefilled .win-selected a:hover,
-.win-itemcontainer.win-selectionstylefilled.win-selected a:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-.win-listview.win-selectionstylefilled .win-selected button,
-.win-listview.win-selectionstylefilled .win-selected input[type=button],
-.win-listview.win-selectionstylefilled .win-selected input[type=reset],
-.win-listview.win-selectionstylefilled .win-selected input[type=text],
-.win-listview.win-selectionstylefilled .win-selected input[type=password],
-.win-listview.win-selectionstylefilled .win-selected input[type=email],
-.win-listview.win-selectionstylefilled .win-selected input[type=number],
-.win-listview.win-selectionstylefilled .win-selected input[type=tel],
-.win-listview.win-selectionstylefilled .win-selected input[type=url],
-.win-listview.win-selectionstylefilled .win-selected input[type=search],
-.win-listview.win-selectionstylefilled .win-selected input::-ms-check,
-.win-listview.win-selectionstylefilled .win-selected textarea,
-.win-listview.win-selectionstylefilled .win-selected .win-textarea,
-.win-listview.win-selectionstylefilled .win-selected select,
-.win-itemcontainer.win-selectionstylefilled.win-selected button,
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=button],
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=reset],
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=text],
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=password],
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=email],
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=number],
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=tel],
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=url],
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=search],
-.win-itemcontainer.win-selectionstylefilled.win-selected input::-ms-check,
-.win-itemcontainer.win-selectionstylefilled.win-selected textarea,
-.win-itemcontainer.win-selectionstylefilled.win-selected .win-textarea,
-.win-itemcontainer.win-selectionstylefilled.win-selected select {
-  background-clip: border-box;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-color: transparent;
-  color: #000000;
-}
-.win-listview.win-selectionstylefilled .win-selected button[type=submit],
-.win-listview.win-selectionstylefilled .win-selected input[type=submit],
-.win-itemcontainer.win-selectionstylefilled.win-selected button[type=submit],
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=submit] {
-  border-color: #ffffff;
-}
-.win-listview.win-selectionstylefilled .win-selected input[type=range]::-ms-fill-lower,
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=range]::-ms-fill-lower {
-  background-color: #ffffff;
-}
-.win-listview.win-selectionstylefilled .win-selected input[type=range]::-ms-thumb,
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=range]::-ms-thumb {
-  background-color: #000000;
-}
-.win-listview.win-selectionstylefilled .win-selected input[type=range]::-ms-fill-upper,
-.win-listview.win-selectionstylefilled .win-selected progress,
-.win-itemcontainer.win-selectionstylefilled.win-selected input[type=range]::-ms-fill-upper,
-.win-itemcontainer.win-selectionstylefilled.win-selected progress {
-  background-color: rgba(255, 255, 255, 0.16);
-}
-.win-listview.win-selectionstylefilled .win-selected progress:indeterminate,
-.win-itemcontainer.win-selectionstylefilled.win-selected progress:indeterminate {
-  background-color: transparent;
-}
-.win-listview.win-selectionstylefilled .win-selected .win-rating .win-star.win-empty,
-.win-itemcontainer.win-selectionstylefilled.win-selected .win-rating .win-star.win-empty {
-  color: rgba(255, 255, 255, 0.16);
-}
-@media (-ms-high-contrast) {
-  .win-listview .win-groupheader {
-    color: WindowText;
-  }
-  .win-selectioncheckmark {
-    color: HighlightText;
-  }
-  .win-listview .win-selectionhint,
-  .win-itemcontainer .win-selectionhint {
-    color: WindowText;
-  }
-  .win-listview .win-focusedoutline,
-  .win-listview .win-groupheader,
-  .win-itemcontainer .win-focusedoutline {
-    outline-color: WindowText;
-  }
-  .win-listview.win-selectionstylefilled .win-itembox,
-  .win-itemcontainer.win-selectionstylefilled .win-itembox {
-    background-color: Window;
-    color: WindowText;
-  }
-  .win-listview.win-selectionstylefilled .win-container:hover .win-itembox,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover .win-itembox {
-    background-color: Highlight;
-    color: HighlightText;
-  }
-  .win-listview.win-selectionstylefilled .win-container.win-selected .win-itembox,
-  .win-listview.win-selectionstylefilled .win-container.win-selected:hover .win-itembox,
-  .win-itemcontainer.win-selectionstylefilled.win-container.win-selected .win-itembox,
-  .win-itemcontainer.win-selectionstylefilled.win-container.win-selected:hover .win-itembox {
-    background-color: Highlight;
-    color: HighlightText;
-  }
-  .win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectionborder,
-  .win-itemcontainer:not(.win-selectionstylefilled).win-container.win-selected .win-selectionborder {
-    border-color: Highlight;
-  }
-  .win-listview.win-selectionstylefilled .win-container.win-selected .win-selectionborder,
-  .win-itemcontainer.win-selectionstylefilled.win-container.win-selected .win-selectionborder {
-    border-color: transparent;
-  }
-  .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectionborder,
-  .win-itemcontainer:not(.win-selectionstylefilled).win-container.win-selected:hover .win-selectionborder {
-    border-color: Highlight;
-  }
-  .win-listview.win-selectionstylefilled .win-selected .win-selectionbackground,
-  .win-listview.win-selectionstylefilled .win-selected:hover .win-selectionbackground,
-  .win-itemcontainer.win-selectionstylefilled.win-selected .win-selectionbackground,
-  .win-itemcontainer.win-selectionstylefilled.win-selected:hover .win-selectionbackground {
-    background-color: Highlight;
-    color: HighlightText;
-  }
-  .win-listview.win-selectionstylefilled .win-selectioncheckmarkbackground,
-  .win-itemcontainer.win-selectionstylefilled .win-selectioncheckmarkbackground {
-    border-color: transparent;
-  }
-  .win-listview:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground,
-  .win-itemcontainer:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground {
-    border-top-color: Highlight;
-    border-right-color: Highlight;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-  }
-  .win-listview:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground:hover,
-  .win-itemcontainer:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground:hover {
-    border-top-color: Highlight;
-    border-right-color: Highlight;
-  }
-  .win-listview.win-rtl:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground,
-  .win-itemcontainer.win-rtl:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground {
-    border-top-color: Highlight;
-    border-left-color: Highlight;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-  }
-  .win-listview.win-selectionstylefilled .win-selected a,
-  .win-listview.win-selectionstylefilled .win-container:hover a,
-  .win-listview.win-selectionstylefilled .win-selected progress,
-  .win-listview.win-selectionstylefilled .win-container:hover progress,
-  .win-listview.win-selectionstylefilled .win-selected .win-rating .win-star:after,
-  .win-listview.win-selectionstylefilled .win-container:hover .win-rating .win-star:after,
-  .win-itemcontainer.win-selectionstylefilled.win-selected a,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover a,
-  .win-itemcontainer.win-selectionstylefilled.win-selected progress,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover progress,
-  .win-itemcontainer.win-selectionstylefilled.win-selected .win-rating .win-star:after,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover .win-rating .win-star:after {
-    color: HighlightText;
-  }
-  .win-listview.win-selectionstylefilled .win-selected input,
-  .win-listview.win-selectionstylefilled .win-container:hover input,
-  .win-listview.win-selectionstylefilled .win-selected input::-ms-check,
-  .win-listview.win-selectionstylefilled .win-container:hover input::-ms-check,
-  .win-listview.win-selectionstylefilled .win-selected input::-ms-value,
-  .win-listview.win-selectionstylefilled .win-container:hover input::-ms-value,
-  .win-listview.win-selectionstylefilled .win-selected input::-ms-track,
-  .win-listview.win-selectionstylefilled .win-container:hover input::-ms-track,
-  .win-listview.win-selectionstylefilled .win-selected button,
-  .win-listview.win-selectionstylefilled .win-container:hover button,
-  .win-listview.win-selectionstylefilled .win-selected progress,
-  .win-listview.win-selectionstylefilled .win-container:hover progress,
-  .win-listview.win-selectionstylefilled .win-selected progress::-ms-fill,
-  .win-listview.win-selectionstylefilled .win-container:hover progress::-ms-fill,
-  .win-listview.win-selectionstylefilled .win-selected select,
-  .win-listview.win-selectionstylefilled .win-container:hover select,
-  .win-listview.win-selectionstylefilled .win-selected textarea,
-  .win-listview.win-selectionstylefilled .win-container:hover textarea,
-  .win-listview.win-selectionstylefilled.win-selected input,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover input,
-  .win-itemcontainer.win-selectionstylefilled.win-selected input::-ms-check,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover input::-ms-check,
-  .win-itemcontainer.win-selectionstylefilled.win-selected input::-ms-value,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover input::-ms-value,
-  .win-itemcontainer.win-selectionstylefilled.win-selected input::-ms-track,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover input::-ms-track,
-  .win-itemcontainer.win-selectionstylefilled.win-selected button,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover button,
-  .win-itemcontainer.win-selectionstylefilled.win-selected progress,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover progress,
-  .win-itemcontainer.win-selectionstylefilled.win-selected progress::-ms-fill,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover progress::-ms-fill,
-  .win-itemcontainer.win-selectionstylefilled.win-selected select,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover select,
-  .win-itemcontainer.win-selectionstylefilled.win-selected textarea,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover textarea {
-    border-color: HighlightText;
-  }
-  .win-listview.win-selectionstylefilled .win-selected input[type=range]::-ms-fill-lower,
-  .win-listview.win-selectionstylefilled .win-container:hover input[type=range]::-ms-fill-lower,
-  .win-listview.win-selectionstylefilled .win-selected progress::-ms-fill,
-  .win-listview.win-selectionstylefilled .win-container:hover progress::-ms-fill,
-  .win-itemcontainer.win-selectionstylefilled.win-selected input[type=range]::-ms-fill-lower,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover input[type=range]::-ms-fill-lower,
-  .win-itemcontainer.win-selectionstylefilled.win-selected progress::-ms-fill,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover progress::-ms-fill {
-    background-color: HighlightText;
-  }
-  .win-listview.win-selectionstylefilled .win-selected input[type=range]::-ms-fill-upper,
-  .win-listview.win-selectionstylefilled .win-container:hover input[type=range]::-ms-fill-upper,
-  .win-listview.win-selectionstylefilled .win-selected progress,
-  .win-listview.win-selectionstylefilled .win-container:hover progress,
-  .win-itemcontainer.win-selectionstylefilled.win-selected input[type=range]::-ms-fill-upper,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover input[type=range]::-ms-fill-upper,
-  .win-itemcontainer.win-selectionstylefilled.win-selected progress,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover progress {
-    background-color: Highlight;
-  }
-  .win-listview.win-selectionstylefilled .win-selected .win-rating .win-star.win-full:before,
-  .win-listview.win-selectionstylefilled .win-container:hover .win-rating .win-star.win-full:before,
-  .win-itemcontainer.win-selectionstylefilled.win-selected .win-rating .win-star.win-full:before,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover .win-rating .win-star.win-full:before {
-    color: ButtonFace;
-  }
-  .win-listview.win-selectionstylefilled .win-selected .win-rating .win-star.win-empty:before,
-  .win-listview.win-selectionstylefilled .win-container:hover .win-rating .win-star.win-empty:before,
-  .win-itemcontainer.win-selectionstylefilled.win-selected .win-rating .win-star.win-empty:before,
-  .win-itemcontainer.win-selectionstylefilled.win-container:hover .win-rating .win-star.win-empty:before {
-    color: Highlight;
-  }
-  .win-listview .win-container:hover,
-  .win-itemcontainer.win-container:hover {
-    outline: Highlight solid 3px;
-  }
-}
-.win-flipview .win-navbutton {
-  background-color: rgba(213, 213, 213, 0.35);
-  color: rgba(0, 0, 0, 0.6);
-}
-.win-flipview .win-navbutton:hover {
-  background-color: rgba(215, 215, 215, 0.94);
-  color: #000000;
-}
-.win-flipview .win-navbutton:hover:active {
-  background-color: rgba(41, 41, 41, 0.74);
-  color: #ffffff;
-}
-@media (-ms-high-contrast) {
-  .win-flipview .win-navbottom {
-    left: 50%;
-    top: 100%;
-    margin-left: -35px;
-    margin-top: -35px;
-  }
-  .win-flipview .win-navbutton {
-    background-color: ButtonFace;
-    color: ButtonText;
-    border: 2px solid ButtonText;
-    width: 65px;
-    height: 35px;
-  }
-  .win-flipview .win-navbutton:hover {
-    background-color: Highlight;
-    color: HighlightText;
-  }
-  .win-flipview .win-navbutton:active {
-    background-color: ButtonText;
-    color: ButtonFace;
-  }
-  .win-flipview .win-navright {
-    margin-left: -65px;
-  }
-}
-.win-tooltip {
-  background-color: #ffffff;
-  border-color: #808080;
-  color: rgba(0, 0, 0, 0.6);
-}
-@media (-ms-high-contrast) {
-  .win-tooltip {
-    background-color: Window;
-    border-color: WindowText;
-    color: WindowText;
-  }
-}
-@media (-ms-high-contrast) {
-  .win-semanticzoom-button {
-    background-color: ButtonFace;
-    border-color: ButtonText;
-    color: ButtonText;
-  }
-  .win-semanticzoom-button:hover:active {
-    background-clip: border-box;
-    background-color: ButtonText;
-    border-color: transparent;
-    color: ButtonFace;
-  }
-  .win-semanticzoom-button:-ms-keyboard-active {
-    background-clip: border-box;
-    background-color: ButtonText;
-    border-color: transparent;
-    color: ButtonFace;
-  }
-  .win-semanticzoom-button:hover {
-    background-color: Highlight;
-    border-color: ButtonText;
-    color: HighlightText;
-  }
-}
-/* AppBarCommand (and MenuCommand) separator. */
-hr.win-command {
-  /* Same color in both light and dark. */
-  background-color: #7b7b7b;
-}
-/*
-Settings flyout is light in both themes unless the app explicitly overrides it.
-*/
-.win-settingsflyout {
-  background-color: #ffffff;
-}
-.win-settingsflyout.win-ui-dark {
-  background-color: #000000;
-}
-@media (-ms-high-contrast) {
-  .win-appbar {
-    background-color: ButtonFace;
-    border-color: Highlight;
-  }
-  /*
-    AppBarCommand and Command button high contrast colors.
-    */
-  button.win-command,
-  button.win-command:active,
-  button.win-command:enabled:hover:active,
-  div.win-command,
-  div.win-command:active,
-  div.win-command:enabled:hover:active {
-    background-color: transparent;
-    border-color: transparent;
-  }
-  hr.win-command {
-    background-color: ButtonText;
-  }
-  .win-label {
-    background-color: transparent;
-    color: ButtonText;
-  }
-  button:disabled .win-label,
-  button:disabled:active .win-label {
-    color: GrayText;
-  }
-  button:enabled.win-command:focus,
-  div:enabled.win-command:focus {
-    border-color: ButtonText;
-  }
-  button.win-hidefocus:focus,
-  div.win-hidefocus:focus {
-    outline: none;
-  }
-  button:enabled.win-command.win-hidefocus:focus,
-  div:enabled.win-command.win-hidefocus:focus {
-    border-color: transparent;
-  }
-  /*
-    Command Image high contrast colors with states
-    */
-  .win-commandimage {
-    background-color: transparent;
-    color: ButtonText;
-  }
-  button:active .win-commandimage,
-  button:enabled:hover:active .win-commandimage {
-    color: ButtonFace;
-  }
-  button:enabled:hover .win-commandimage {
-    color: HighlightText;
-  }
-  button:disabled .win-commandimage,
-  button:disabled:active .win-commandimage {
-    color: GrayText;
-  }
-  button[aria-checked=true] .win-commandimage {
-    color: ButtonFace;
-  }
-  button[aria-checked=true]:active .win-commandimage,
-  button[aria-checked=true]:enabled:hover:active .win-commandimage {
-    color: ButtonText;
-  }
-  button[aria-checked=true]:enabled:hover .win-commandimage {
-    color: HighlightText;
-  }
-  button[aria-checked=true]:disabled .win-commandimage,
-  button[aria-checked=true]:disabled:active .win-commandimage {
-    color: ButtonFace;
-  }
-  /*
-    Command Image high contrast colors with states
-    */
-  .win-commandring {
-    background-color: transparent;
-    border-color: ButtonText;
-  }
-  button:active .win-commandring,
-  button:enabled:hover:active .win-commandring {
-    background-color: ButtonText;
-    border-color: ButtonText;
-  }
-  button:enabled:hover .win-commandring {
-    background-color: Highlight;
-    border-color: ButtonText;
-  }
-  button:disabled .win-commandring,
-  button:disabled:active .win-commandring {
-    background-color: transparent;
-    border-color: GrayText;
-  }
-  button[aria-checked=true] .win-commandring {
-    background-color: ButtonText;
-    border-color: ButtonText;
-  }
-  button[aria-checked=true]:active .win-commandring,
-  button[aria-checked=true]:enabled:hover:active .win-commandring {
-    background-color: ButtonFace;
-    border-color: ButtonText;
-  }
-  button[aria-checked=true]:enabled:hover .win-commandring {
-    background-color: Highlight;
-    border-color: ButtonText;
-  }
-  button[aria-checked=true]:disabled .win-commandring,
-  button[aria-checked=true]:disabled:active .win-commandring {
-    background-color: GrayText;
-    border-color: GrayText;
-  }
-  /*
-    Menu command high contrast colors
-    */
-  .win-menu hr.win-command {
-    background-color: ButtonText;
-  }
-  .win-menu button.win-command {
-    background-color: ButtonFace;
-    color: ButtonText;
-  }
-  .win-menu button.win-command:focus {
-    outline: none;
-    background-color: Highlight;
-    color: HighlightText;
-  }
-  .win-menu button.win-command:active {
-    background-color: Highlight;
-    color: HighlightText;
-  }
-  .win-menu button.win-command:enabled:hover:active {
-    background-color: ButtonText;
-    color: ButtonFace;
-  }
-  .win-menu button.win-command:-ms-keyboard-active {
-    background-color: ButtonText;
-    color: ButtonFace;
-  }
-  .win-menu button.win-command:disabled,
-  .win-menu button.win-command:disabled:active {
-    background-color: ButtonFace;
-    color: GrayText;
-  }
-  /*
-    Flyout control high contrast colors.
-    */
-  .win-flyout,
-  .win-settingsflyout {
-    background-color: Window;
-    border-color: WindowText;
-    color: WindowText;
-  }
-}
-@media (-ms-high-contrast) {
-  .win-searchbox {
-    border-color: ButtonText;
-    background-color: ButtonFace;
-    color: ButtonText;
-  }
-  .win-searchbox-button {
-    background-color: ButtonFace;
-    color: ButtonText;
-  }
-  .win-searchbox:-ms-input-placeholder {
-    color: GrayText;
-  }
-  .win-searchbox-button[disabled=false]:hover {
-    border-color: ButtonText;
-    background-color: HighLight;
-    color: HighLightText;
-  }
-  .win-searchbox-button-input-focus {
-    background-color: ButtonText;
-    color: ButtonFace;
-  }
-  .win-searchbox-button-input-focus:hover {
-    border-color: ButtonText;
-    background-color: HighLight;
-    color: HighLightText;
-  }
-  .win-searchbox-button:active {
-    background-color: ButtonText;
-    color: ButtonFace;
-  }
-  .win-searchbox-flyout {
-    border-color: ButtonText;
-    background-color: ButtonFace;
-  }
-  .win-searchbox-suggestion-result:hover,
-  .win-searchbox-suggestion-query:hover {
-    background-color: Highlight;
-    color: HighlightText;
-  }
-  .win-searchbox-suggestion-result:hover .win-searchbox-flyout-highlighttext,
-  .win-searchbox-suggestion-query:hover .win-searchbox-flyout-highlighttext {
-    color: HighlightText;
-  }
-  .win-searchbox-suggestion-query,
-  .win-searchbox-suggestion-result {
-    color: ButtonText;
-  }
-  .win-searchbox-suggestion-selected {
-    background-color: Highlight;
-    color: HighlightText;
-  }
-  .win-searchbox-suggestion-separator {
-    color: ButtonText;
-  }
-  .win-searchbox-suggestion-separator hr {
-    border-color: ButtonText;
-  }
-  .win-searchbox-flyout-highlighttext {
-    color: ButtonText;
-  }
-  .win-searchbox-disabled {
-    background-color: ButtonFace;
-    border-color: GrayText;
-  }
-  .win-searchbox-disabled input[disabled] {
-    background-color: ButtonFace;
-    color: GrayText;
-    border-color: GrayText;
-  }
-  .win-searchbox-disabled div {
-    color: GrayText;
-    background-color: ButtonFace;
-  }
-  .win-searchbox-suggestion-selected .win-searchbox-flyout-highlighttext {
-    color: HighlightText;
-  }
-}
-@media (-ms-high-contrast) {
-  .win-navbarcontainer-pageindicator {
-    background-color: ButtonFace;
-  }
-  .win-navbarcontainer-pageindicator:after {
-    display: block;
-    border: 1px solid ButtonText;
-    content: "";
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-  }
-  .win-navbarcontainer-pageindicator-current {
-    background-color: ButtonText;
-  }
-  .win-navbarcontainer-pageindicator:hover {
-    background-color: Highlight;
-  }
-  .win-navbarcontainer-pageindicator-current:hover {
-    background-color: ButtonText;
-  }
-  .win-navbarcontainer-pageindicator:hover:active {
-    background-color: ButtonText;
-  }
-  .win-navbarcontainer-navarrow {
-    background-color: ButtonFace;
-    color: ButtonText;
-  }
-  .win-navbarcontainer-navarrow:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 2px solid ButtonText;
-    content: "";
-    width: calc(100% - 3px);
-    height: calc(100% - 3px);
-  }
-  .win-navbarcontainer-navarrow:hover {
-    background-color: Highlight;
-    color: HighlightText;
-  }
-  .win-navbarcontainer-navarrow:hover:active {
-    background-color: ButtonText;
-    color: ButtonFace;
-  }
-  /*
-        NavBarCommand colors.
-    */
-  .win-navbarcommand-button,
-  .win-navbarcommand-splitbutton {
-    background-color: ButtonFace;
-    color: ButtonText;
-  }
-  .win-navbarcommand-button:after,
-  .win-navbarcommand-splitbutton:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 2px solid ButtonText;
-    content: "";
-    width: calc(100% - 3px);
-    height: calc(100% - 3px);
-    pointer-events: none;
-  }
-  .win-navbarcommand-button:hover,
-  .win-navbarcommand-splitbutton:hover {
-    background-color: Highlight;
-    color: HighlightText;
-  }
-  .win-navbarcommand-splitbutton.win-navbarcommand-splitbutton-opened,
-  .win-navbarcommand-splitbutton.win-navbarcommand-splitbutton-opened:hover,
-  .win-navbarcommand-button.win-pressed,
-  .win-navbarcommand-button.win-pressed:hover,
-  .win-navbarcommand-splitbutton.win-pressed,
-  .win-navbarcommand-splitbutton.win-pressed:hover {
-    background-color: ButtonText;
-    color: ButtonFace;
-  }
-}
-/* Light theme */
 .win-ui-light {
   color: #000000;
   background-color: #ffffff;
@@ -5383,7 +5377,6 @@ button.win-command:disabled:active .win-label {
   background-color: rgba(41, 41, 41, 0.741);
   color: white;
 }
-/* Inverse theme colors */
 .win-ui-dark {
   /* Command Ring colors */
   /* Command button label colors */
