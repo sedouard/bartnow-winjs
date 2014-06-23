@@ -34,15 +34,17 @@
     
     <!--The app bar lives in the default page since it appears on all pages (will be hidden for login splash screen)-->
     
+    <div id="pane" style="width:100%;position:relative;bottom:50px; z-index:2; text-align:center">
+        <button id="toggleNavBar" style="height:30px; width:30px;border:none"><img src="/images/Down-arrow-icon.png" height="30" width="30"></button>
+    </div>
     <!-- Create AppBar -->
     <div class="box">
         <!-- Create AppBar -->
         <!-- BEGINTEMPLATE: Template code for an AppBar -->
         <div id="navBar" data-win-control="WinJS.UI.AppBar" data-win-options="{ placement: 'bottom'}">
-            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdAdd',label:'Add',icon:'add',section:'global',tooltip:'Add item'}"></button>
-            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRemove',label:'Remove',icon:'remove',section:'global',tooltip:'Remove item'}"></button>
-            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdDelete',label:'Delete',icon:'delete',section:'global',tooltip:'Delete item'}"></button>
-            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdEdit',label:'Edit',icon:'edit',section:'selection',tooltip:'Edit'}"></button>
+            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdAdd',label:'Add',icon:'home',section:'global',tooltip:'Home'}"></button>
+            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRemove',label:'Remove',icon:'add',section:'global',tooltip:'Add item'}"></button>
+            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdDelete',label:'Delete',icon:'remove',section:'global',tooltip:'Remove item'}"></button>
         </div>
         <!-- ENDTEMPLATE -->
         <div id="status"></div><br />
@@ -50,9 +52,7 @@
     </div>
 
 
-        <div id="pane" style="width:100%;position:relative;bottom:50px; z-index:2; text-align:center">
-            <button id="toggleNavBar" style="height:30px; width:30px;border:none"><img src="/images/Down-arrow-icon.png" height="30" width="30"></button>
-        </div>
+    
 
     
 

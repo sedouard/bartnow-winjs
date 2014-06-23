@@ -2,7 +2,7 @@
 $.ajaxPrefilter( function(options, originalOptions, jqXHR){
     options.url = "http://bartnowapi.azurewebsites.net/api" + options.url;
 });
-
+var g_Location;
 (function () {
     "use strict";
 
@@ -34,6 +34,7 @@ $.ajaxPrefilter( function(options, originalOptions, jqXHR){
             var stations = new Stations();
 
             stations.fetch({
+                data: g_Location,
                 success: function(){
 
                     for(var i in stations.models){
@@ -132,24 +133,40 @@ var StationView = Backbone.View.extend({
 //END ROUTES
 
     app.addEventListener("ready", function (args) {
-        ui.processAll().then(function() {
 
-            //show navbar
-            var navBar = document.getElementById('navBar').winControl;
-            navBar.show();
+        //We need the current location of device.
+        //if we can't do it the app will just alert
+        if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(function(position){
 
-            //register the navbar show button
-            $("#toggleNavBar").click(function(evt){
-                navBar.show();
-            });
+                    g_Location = position.coords;
 
-        }).then(function(){
-            return sched.requestDrain(sched.Priority.aboveNormal + 1);
-        }).then(function(){
-            ui.enableAnimations();
+                    ui.processAll().then(function() {
 
-            Backbone.history.start();
-        });
+                    //show navbar
+                    var navBar = document.getElementById('navBar').winControl;
+
+                    //register the navbar show button
+                    $("#toggleNavBar").click(function(evt){
+                        navBar.show();
+                    });
+
+                    }).then(function(){
+                        return sched.requestDrain(sched.Priority.aboveNormal + 1);
+                    }).then(function(){
+                        ui.enableAnimations();
+
+                        Backbone.history.start();
+                    });
+                }, function(error) {
+                    alert(error);
+                }
+            );
+        }
+        else{
+            alert('Could not get your location. BartNOW Requires your location to work');
+        }
+        
     });
 
 
