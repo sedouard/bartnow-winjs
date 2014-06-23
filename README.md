@@ -16,8 +16,12 @@ its UI components and data binding, we can host all the pages within index.html 
 
 Not much to do! Simply host the root folder (containing index.html) on a static website and the app will do the rest by calling the custom BartNOW apis.
 
-#Features to be added
+To run the app locally, checkout the sedouard/bartnow-backend nodejs project. Run the backend server locally on your port of interest. 
+
+Inside index.js, change the first line of code starting with $.ajaxprefilter to your local server and port (like http://localhost:8080).
+
+#Needed Features
 
 -Favorite Stations
 -Cordova Integration
--Push notifications for alerts
+-Push notifications for alerts (via Cordova)
