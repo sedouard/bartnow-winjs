@@ -40,6 +40,8 @@
     var addStationToList = function(model){
         //our view model requires at least 2 estimations with formatted arrivals.
         //0 to 3 blank entries
+
+
         if(model.attributes.etd){
             var blankCount = 3 - model.attributes.etd.length;
             for(var z = 0; z < blankCount; z++){
@@ -65,10 +67,15 @@
         },
         ready:function(element, stations){
 
+            if(window.Stations){
+                window.Stations.forEach(function(){
+                    window.Stations.pop();
+                });
+            }
             for(var i in stations.models){
                 addStationToList(stations.models[i]);
             }
-            
+
             //add click handler to each list view tiem
             var thatStations = stations;
             var listView = $("#homePivotListView")[0];
