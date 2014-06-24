@@ -20,6 +20,20 @@
                 name : ""
             };
 
+            if(station.attributes.etd){
+                for(var i in station.attributes.etd){
+
+                    //TODO WinJS wants a binding function. I'm sure I'm doing this wrong, but things seem to work here
+                    station.attributes.etd[i].bind = function(property){
+                        return this[property];
+                        
+                    };
+
+                    data.stationData.push(station.attributes.etd[i]);
+                }
+            }
+            
+
             WinJS.Namespace.define('BartNow.Station', data);
             
             station.on("change", function(model){
