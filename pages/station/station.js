@@ -39,7 +39,7 @@
 
             
             
-            station.on("change", function(model){
+            station.on("add", function(model){
                 var pivot = $("#pivotScenario3")[0].winControl;
                 pivot.title = model.attributes.name;
 
