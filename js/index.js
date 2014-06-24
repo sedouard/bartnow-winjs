@@ -72,15 +72,17 @@ var StationView = Backbone.View.extend({
             station.fetch({
                 success: function(){
 
+                    //show pivot view for this station
                     $("#progressSymbol").hide();
+                    that.$el[0].innerHTML ="";
+                    var hp = new StationPage(that.el, station);
+                    hp.element.style.width = "100%";
+                    hp.element.style.height = "100%";
+                    
                 }
             });
             
-            //show pivot view for this station
-            that.$el[0].innerHTML ="";
-            var hp = new StationPage(that.el, station);
-            hp.element.style.width = "100%";
-            hp.element.style.height = "100%";
+            
             
 
             return this;
