@@ -21,7 +21,7 @@
             };
             WinJS.Namespace.define('BartNow.Station', data);
 
-            if(station.attributes.etd){
+            if(station.attributes && station.attributes.etd){
                 for(var i in station.attributes.etd){
 
                     //TODO WinJS wants a binding function. I'm sure I'm doing this wrong, but things seem to work here
@@ -39,7 +39,7 @@
 
             
             
-            station.on("add", function(model){
+            station.on("change", function(model){
                 var pivot = $("#pivotScenario3")[0].winControl;
                 pivot.title = model.attributes.name;
 
