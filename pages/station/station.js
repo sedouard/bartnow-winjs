@@ -20,7 +20,7 @@
                 name : ""
             };
             WinJS.Namespace.define('BartNow.Station', data);
-            
+
             if(station.attributes.etd){
                 for(var i in station.attributes.etd){
 
@@ -32,6 +32,8 @@
 
                     data.stationData.push(station.attributes.etd[i]);
                 }
+                window.StationName = model.attributes.name;
+                data.name = model.attributes.name;
             }
             
 
@@ -51,9 +53,13 @@
 
                     data.stationData.push(station.attributes.etd[i]);
                 }
-
-                window.StationName = model.attributes.name;
-                data.name = model.attributes.name;
+                if(!window.StationName){
+                    window.StationName = model.attributes.name;
+                }
+                if(!data.name){
+                    data.name = model.attributes.name;
+                }
+                
                 //data.stationData = new WinJS.Binding.List([]);
             });
             
