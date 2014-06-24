@@ -5,7 +5,7 @@ $.ajaxPrefilter( function(options, originalOptions, jqXHR){
 var g_Location;
 (function () {
     "use strict";
-
+    var currentLocation = "/#";
     var app = WinJS.Application;
     var nav = WinJS.Navigation;
     var sched = WinJS.Utilities.Scheduler;
@@ -103,13 +103,14 @@ var StationView = Backbone.View.extend({
 
     router.on('route:home', function(){
         $("#progressSymbol").show();
-        console.log('Home route hit');
+        currentLocation = "/#";
         var home_view = new HomeView({ el: $("#contenthost") });
     });
 
     router.on('route:station', function(id){
         $("#progressSymbol").show();
         console.log('Station route hit');
+        currentLocation = "/#/station/" + id;
         var home_view = new StationView({ el: $("#contenthost"), id: id });
     });
 
@@ -134,6 +135,10 @@ var StationView = Backbone.View.extend({
 
                     $("#homeButton").click(function(evt){
                         window.location = '/#';
+                    });
+
+                    $("#refreshButton").click(function(evt){
+                        window.location.assign(currentLocation);
                     });
 
                     }).then(function(){
