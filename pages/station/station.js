@@ -19,7 +19,8 @@
                 stationData : stationData,
                 name : ""
             };
-
+            WinJS.Namespace.define('BartNow.Station', data);
+            
             if(station.attributes.etd){
                 for(var i in station.attributes.etd){
 
@@ -34,7 +35,7 @@
             }
             
 
-            WinJS.Namespace.define('BartNow.Station', data);
+            
             
             station.on("change", function(model){
                 var pivot = $("#pivotScenario3")[0].winControl;

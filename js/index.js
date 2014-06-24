@@ -131,7 +131,7 @@ var StationView = Backbone.View.extend({
                     });
 
                     $("#homeButton").click(function(evt){
-                        window.location = '/';
+                        window.location = '/#';
                     });
 
                     }).then(function(){
