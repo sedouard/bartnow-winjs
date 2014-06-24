@@ -30,7 +30,6 @@
         <progress id="progressSymbol"></progress>
     </div>
     <div id="contenthost" style="width:100%;height:100%"></div>
-    <div id="contenthost" style="width:100%;height:100%"></div>
     
     <!--The app bar lives in the default page since it appears on all pages (will be hidden for login splash screen)-->
     
@@ -42,9 +41,9 @@
         <!-- Create AppBar -->
         <!-- BEGINTEMPLATE: Template code for an AppBar -->
         <div id="navBar" data-win-control="WinJS.UI.AppBar" data-win-options="{ placement: 'bottom'}">
-            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdAdd',label:'Add',icon:'home',section:'global',tooltip:'Home'}"></button>
-            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRemove',label:'Remove',icon:'add',section:'global',tooltip:'Add item'}"></button>
-            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdDelete',label:'Delete',icon:'remove',section:'global',tooltip:'Remove item'}"></button>
+            <button id="homeButton" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdAdd',label:'Home',icon:'home',section:'global',tooltip:'Home'}"></button>
+            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRemove',label:'Remove',icon:'add',section:'global',tooltip:'Add to Favorites'}"></button>
+            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdDelete',label:'Delete',icon:'remove',section:'global',tooltip:'Remove from Favorites'}"></button>
         </div>
         <!-- ENDTEMPLATE -->
         <div id="status"></div><br />

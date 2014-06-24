@@ -12,9 +12,13 @@ var g_Location;
     var ui = WinJS.UI;
 
 //MODELS
+
+    //A Single station
     var Station = Backbone.Model.extend({
         urlRoot: '/stations'
     });
+
+    //A collection of stations
     var Stations = Backbone.Collection.extend({
         url: '/stations'
     });
@@ -36,38 +40,15 @@ var g_Location;
             stations.fetch({
                 data: g_Location,
                 success: function(){
-
-                    for(var i in stations.models){
-                        //our view model requires at least 2 estimations with formatted arrivals.
-                        //0 to 3 blank entries
-                        if(stations.models[i].attributes.etd){
-                            var blankCount = 3 - stations.models[i].attributes.etd.length;
-                            for(var z = 0; z < blankCount; z++){
-
-                                stations.models[i].attributes.etd.push({
-                                    formattedArrivals: ""
-                                });
-                            }
-                        }
-                        else{
-                            stations.models[i].attributes.etd = [];
-                            for(var z = 0; z < 3; z++){
-                                stations.models[i].attributes.etd.push({
-                                    formattedArrivals: ""
-                                });
-                            }
-                        }
-                    }
                     
-                    that.$el[0].innerHTML ="";
-                    var hp = new HomePage(that.el, stations);
-                    hp.element.style.width = "100%";
-                    hp.element.style.height = "100%";
                     $("#progressSymbol").hide();
                 }
             });
             
-            
+            that.$el[0].innerHTML ="";
+            var hp = new HomePage(that.el, stations);
+            hp.element.style.width = "100%";
+            hp.element.style.height = "100%";
 
             return this;
         }
@@ -91,15 +72,15 @@ var StationView = Backbone.View.extend({
             station.fetch({
                 success: function(){
 
-                    //show pivot view for this station
-                    that.$el[0].innerHTML ="";
-                    var hp = new StationPage(that.el, station);
-                    hp.element.style.width = "100%";
-                    hp.element.style.height = "100%";
                     $("#progressSymbol").hide();
                 }
             });
             
+            //show pivot view for this station
+            that.$el[0].innerHTML ="";
+            var hp = new StationPage(that.el, station);
+            hp.element.style.width = "100%";
+            hp.element.style.height = "100%";
             
 
             return this;
@@ -130,8 +111,6 @@ var StationView = Backbone.View.extend({
         var home_view = new StationView({ el: $("#contenthost"), id: id });
     });
 
-//END ROUTES
-
     app.addEventListener("ready", function (args) {
 
         //We need the current location of device.
@@ -143,12 +122,16 @@ var StationView = Backbone.View.extend({
 
                     ui.processAll().then(function() {
 
-                    //show navbar
+                    //NAV BAR
                     var navBar = document.getElementById('navBar').winControl;
 
                     //register the navbar show button
                     $("#toggleNavBar").click(function(evt){
                         navBar.show();
+                    });
+
+                    $("#homeButton").click(function(evt){
+                        window.location = '/';
                     });
 
                     }).then(function(){

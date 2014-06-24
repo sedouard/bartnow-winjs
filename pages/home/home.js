@@ -7,16 +7,38 @@
     
 
     window.Stations = new WinJS.Binding.List([]);
-    
+
+
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready:function(element, stations){
             //$("#progress").show();
             for(var i in stations.models){
-                var model = stations.models[i];
                 window.Stations.push(stations.models[i]);
             }
             
+            stations.on("add", function(model){
 
+              //our view model requires at least 2 estimations with formatted arrivals.
+                //0 to 3 blank entries
+                if(model.attributes.etd){
+                    var blankCount = 3 - model.attributes.etd.length;
+                    for(var z = 0; z < blankCount; z++){
+
+                        model.attributes.etd.push({
+                            formattedArrivals: ""
+                        });
+                    }
+                }
+                else{
+                    model.attributes.etd = [];
+                    for(var z = 0; z < 3; z++){
+                        model.attributes.etd.push({
+                            formattedArrivals: ""
+                        });
+                    }
+                }
+                window.Stations.push(model);
+            });
 
             Microsoft.Maps.loadModule('Microsoft.Maps.Themes.BingTheme', { callback: function(){
 
